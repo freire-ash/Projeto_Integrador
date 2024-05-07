@@ -10,12 +10,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         return;
     }
 
-    if (senha !== confirmacaoSenha) {
-        alert("As senhas não coincidem!");
-        event.preventDefault();
-        return;
-    }
-
     if (!emailValido(email)) {
         alert("Por favor, insira um email válido.");
         event.preventDefault();
