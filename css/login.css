@@ -1,192 +1,202 @@
-/* Estilos globais */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+       /* Estilos globais */
+       *,
+       *::before,
+       *::after {
+           box-sizing: border-box;
+       }
 
-body {
-    margin: 0;
-    font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-    background: #ffffff;
-}
+       body {
+           margin: 0;
+           font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+           background: #ffffff;
+       }
 
-/* Seção dos formulários */
-.forms-section {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+       /* Seção dos formulários */
+       .forms-section {
+           position: absolute;
+           top: 50px;
+           right: 50px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+       }
 
-/* Título da seção */
-.section-title {
-    font-size: 32px;
-    letter-spacing: 1px;
-    color: #000000;
-}
+       /* Título da seção */
+       .section-title {
+           font-size: 32px;
+           letter-spacing: 1px;
+           color: #000000;
+       }
 
-/* Formulários */
-.forms {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 30px;
-}
+       /* Formulários */
+       .forms {
+           display: flex;
+           align-items: flex-start;
+           margin-top: 30px;
+       }
 
-/* Envoltório do formulário */
-.form-wrapper {
-    animation: hideLayer .3s ease-out forwards;
-}
+       /* Envoltório do formulário */
+       .form-wrapper {
+           animation: hideLayer .3s ease-out forwards;
+       }
 
-.form-wrapper.is-active {
-    animation: showLayer .3s ease-in forwards;
-}
+       .form-wrapper.is-active {
+           animation: showLayer .3s ease-in forwards;
+       }
 
-/* Botão de alternância entre Login e Cadastro */
-.switcher {
-    position: relative;
-    cursor: pointer;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0;
-    text-transform: uppercase;
-    font-family: inherit;
-    font-size: 16px;
-    letter-spacing: .5px;
-    color: #999;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    transform: translateX(0);
-    transition: all .3s ease-out;
-}
+       /* Botão de alternância entre Login e Cadastro */
+       .switcher {
+           position: relative;
+           cursor: pointer;
+           display: block;
+           margin-right: auto;
+           margin-left: auto;
+           padding: 0;
+           text-transform: uppercase;
+           font-family: inherit;
+           font-size: 16px;
+           letter-spacing: .5px;
+           color: #999;
+           background-color: transparent;
+           border: none;
+           outline: none;
+           transform: translateX(0);
+           transition: all .3s ease-out;
+       }
 
-.form-wrapper.is-active .switcher-login {
-    color: #6962AD;
-    transform: translateX(90px);
-}
+       .form-wrapper.is-active .switcher-login {
+           color: #6962AD;
+           transform: translateX(90px);
+       }
 
-.form-wrapper.is-active .switcher-signup {
-    color: #6962AD;
-    transform: translateX(-90px);
-}
+       .form-wrapper.is-active .switcher-signup {
+           color: #6962AD;
+           transform: translateX(-90px);
+       }
 
-/* Underline animado */
-.switcher-login .underline::before {
-    transform: translateX(101%);
-}
+       /* Underline animado */
+       .switcher-login .underline::before {
+           transform: translateX(101%);
+       }
 
-.switcher-signup .underline::before {
-    transform: translateX(-101%);
-}
+       .switcher-signup .underline::before {
+           transform: translateX(-101%);
+       }
 
-.form-wrapper.is-active .underline::before {
-    transform: translateX(0);
-}
+       .form-wrapper.is-active .underline::before {
+           transform: translateX(0);
+       }
 
-/* Formulário */
-.form {
-    overflow: hidden;
-    min-width: 260px;
-    margin-top: 50px;
-    padding: 30px 25px;
-    border-radius: 5px;
-    transform-origin: top;
-}
+       /* Formulário */
+       .form {
+           overflow: hidden;
+           min-width: 260px;
+           margin-top: 50px;
+           padding: 30px 25px;
+           border-radius: 5px;
+           transform-origin: top;
+       }
 
-/* Animações dos formulários */
-.form-wrapper.is-active .form-login {
-    animation: showLogin .3s ease-in forwards;
-}
+       /* Animações dos formulários */
+       .form-wrapper.is-active .form-login {
+           animation: showLogin .3s ease-in forwards;
+       }
 
-.form fieldset {
-    position: relative;
-    opacity: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: all .3s ease-out;
-}
+       .form fieldset {
+           position: relative;
+           opacity: 0;
+           margin: 0;
+           padding: 0;
+           border: 0;
+           transition: all .3s ease-out;
+       }
 
-.form-login fieldset {
-    transform: translateX(-50%);
-}
+       .form-login fieldset {
+           transform: translateX(-50%);
+       }
 
-.form-signup fieldset {
-    transform: translateX(50%);
-}
+       .form-signup fieldset {
+           transform: translateX(50%);
+       }
 
-.form-wrapper.is-active fieldset {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity .4s ease-in, transform .35s ease-in;
-}
+       .form-wrapper.is-active fieldset {
+           opacity: 1;
+           transform: translateX(0);
+           transition: opacity .4s ease-in, transform .35s ease-in;
+       }
 
-.form legend {
-    position: absolute;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-}
+       .form legend {
+           position: absolute;
+           overflow: hidden;
+           width: 1px;
+           height: 1px;
+           clip: rect(0 0 0 0);
+       }
 
-/* Blocos de entrada de texto */
-.input-block {
-    margin-bottom: 20px;
-}
+       /* Blocos de entrada de texto */
+       .input-block {
+           margin-bottom: 20px;
+       }
 
-.input-block label {
-    font-size: 14px;
-    color: #a1b4b4;
-}
+       .input-block label {
+           font-size: 14px;
+           color: #a1b4b4;
+       }
 
-.input-block input {
-    display: block;
-    width: 100%;
-    margin-top: 8px;
-    padding-right: 15px;
-    padding-left: 15px;
-    font-size: 16px;
-    line-height: 40px;
-    color: #000000;
-    background: #eef9fe;
-    border: 1px solid #110229;
-    border-radius: 7px;
-}
+       /* Caixas de respostas */
 
+       .input-block input {
+           display: block;
+           width: 100%;
+           margin-top: 8px;
+           padding-right: 15px;
+           padding-left: 15px;
+           font-size: 16px;
+           line-height: 40px;
+           color: #000000;
+           background: #ffffff;
+           border: 1px solid #110229;
+           border-radius: 7px;
+       }
+       
 
-/* Botões de envio */
-.form [type='submit'] {
-    opacity: 0;
-    display: block;
-    min-width: 120px;
-    margin: 30px auto 10px;
-    font-size: 18px;
-    line-height: 40px;
-    border-radius: 25px;
-    border: none;
-    transition: all .3s ease-out;
-}
+       /* Botões de envio */
+       .form [type='submit'] {
+           opacity: 0;
+           display: block;
+           min-width: 120px;
+           margin: 30px auto 10px;
+           font-size: 18px;
+           line-height: 40px;
+           border-radius: 25px;
+           border: none;
+           transition: all .3s ease-out;
+       }
 
-.form-wrapper.is-active .form [type='submit'] {
-    opacity: 1;
-    transform: translateX(0);
-    transition: all .10s ease-in;
-}
+       .form-wrapper.is-active .form [type='submit'] {
+           opacity: 1;
+           transform: translateX(0);
+           transition: all .10s ease-in;
+       }
 
-/* Estilos dos botões */
-.btn-login {
-    color: #fbfdff;
-    background: #FFD23F;
-    transform: translateX(-30%);
-}
+       /* Estilos dos botões */
+       .btn-login {
+           color: #fbfdff;
+           background: #FFD23F;
+           transform: translateX(-30%);
+       }
 
-.btn-signup {
-    color: #fbfdff;
-    background: #FFD23F;
-    transform: translateX(-30%);
-}
+       .btn-signup {
+           color: #fbfdff;
+           background: #FFD23F;
+           transform: translateX(-30%);
+       }
+
+       #nome {
+    
+    }
+
+    #cpf{
+        
+    }

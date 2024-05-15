@@ -1,4 +1,4 @@
-document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+document.getElementById("form-signup").addEventListener("submit", function(event) {
     var nome = document.getElementById("nome").value;
     var cpf = document.getElementById("cpf").value;
     var email = document.getElementById("email").value;
@@ -41,17 +41,6 @@ document.getElementById("cadastroForm").addEventListener("submit", function(even
     }
 });
 
-function cpfValido(cpf) {
-    // Expressão regular para validar CPF
-    var regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-    return regex.test(cpf);
-}
-
-function emailValido(email) {
-    // Expressão regular para validar e-mail
-    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
 
 function senhaValida(senha) {
     // Verifica se a senha tem pelo menos 8 caracteres
