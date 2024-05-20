@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel='stylesheet' media='screen' href='../css/login.css'>
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="../imagens/icone.ico" type="image/x-icon">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head >
 
 <body>
 
+  <div class="imagem-container">
+    <img src="../imagens/6021946.jpg" alt="Imagem" class="imagem">
+</div>
   <section class="forms-section">
 
     <div class="forms">
@@ -20,44 +28,40 @@
           <fieldset>
             <legend>Please, enter your email and password for login.</legend>
             <div class="input-block">
-              <label for="login-email">E-mail</label>
-              <input id="login-email" type="email" required>
+              <input id="login-email" type="email" required placeholder="Email">
             </div>
             <div class="input-block">
-              <label for="login-password">Password</label>
-              <input id="login-password" type="password" required>
+              <input id="login-password" type="password" required placeholder="Senha">
             </div>
           </fieldset>
-          <button type="submit" class="btn-login">Login</button>
+          <button type="submit" class="btn-login">Entrar</button>
         </form>
       </div>
       <div class="form-wrapper">
-        <button type="button" class="switcher switcher-signup">Sign Up<span class="underline"></span></button>
+        <button type="button" class="switcher switcher-signup">Sing up<span class="underline"></span></button>
 
 
         <form id="form-signup" class="form form-signup" action="perguntas2.html">
           <fieldset>
             <legend>Please, enter your email, password and password confirmation for sign up.</legend>
             <div class="input-block ">
-              <label for="text">Nome</label>
-              <input id="nome" type="text">
+             
+              <input id="nome" type="text"  required placeholder="Nome">
             </div>
 
             <div class="input-block">
-              <label for="cpf">CPF</label>
-              <input id="cpf" type="text">
+              
+              <input id="cpf" type="text" required  placeholder="CPF">
             </div>
             <div class="input-block">
-              <label for="signup-email">E-mail</label>
-              <input id="signup-email" type="email">
+      
+              <input id="signup-email" type="email" required placeholder="Email">
             </div>
             <div class="input-block">
-              <label for="signup-password">Senha </label>
-              <input id="signup-password" type="password">
+              <input id="signup-password" type="password" required placeholder= "Senha">
             </div>
             <div class="input-block">
-              <label for="signup-password-confirm">Confirmar senha</label>
-              <input id="signup-password-confirm" type="password">
+              <input id="signup-password-confirm" type="password" required placeholder= "Confirmar senha">
             </div>
           </fieldset>
           <button type="submit" class="btn-signup" >Continue</button>
@@ -74,12 +78,13 @@
           })
 
         </script>
+    
       </div>
     </div>
   </section>
  
 
-
+<!-- Link para a confirmacao do email: https://github.com/PHPMailer/PHPMailer -->
   <script src="../js/login.js"></script>
 </body>
 

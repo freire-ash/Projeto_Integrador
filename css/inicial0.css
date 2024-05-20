@@ -1,0 +1,51 @@
+body {
+    background-image: url("../Projeto_Integrador/img/inicio0.png");
+    background-size: 100%;
+   
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+ 
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.start-button {
+    text-align: center;
+}
+.start-button button {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFC436;
+    color: white;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+   
+}
+ 
+button {
+    position:absolute;
+    top:80%;
+    left:45%;
+    transform: translate(-50%, -50%);
+    width: 15% ;
+}

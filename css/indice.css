@@ -1,0 +1,75 @@
+/* 
+   nav#menu li:hover{
+text-align: justify;
+ 
+    }
+ 
+ 
+    /* como eu posso colocar a mesma fonte */
+    body{
+      margin: 1px;
+      padding: 50px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient( blue 20%, white 20%);
+      position: relative;
+      left: 9%;
+      margin-top: 5%;
+  }
+      
+    
+    h1,h2,h3, p {
+       font-family: Verdana;
+ 
+ 
+    }
+   /*mecher nos links dos elementos ancoras*/
+ 
+    nav#menu a:visited{
+       color: #0C356A;
+    }
+ 
+h1#indice{
+
+}
+ 
+
+  */
+
+  body {
+   display: flex;
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+}
+
+.indiceprincipal {
+   width: 20%; /* Largura de 20% da tela */
+   background-color: #f4f4f4; /* Cor de fundo para diferenciar */
+   padding: 20px;
+   align-items: first baseline;
+   box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+.conteudodatela {
+   width: 80%; /* Largura de 80% da tela */
+   padding: 20px;
+   box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+header #menu ul {
+   list-style-type: left;
+}
+
+header #menu ul li {
+   margin-bottom: 10px;
+}
+
+header #menu ul li a {
+   text-decoration: none;
+   color: #000;
+   font-weight: bold;
+}
+
+h1 {
+   margin-top: 0;
+}

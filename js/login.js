@@ -5,11 +5,7 @@ document.getElementById("form-signup").addEventListener("submit", function(event
     var senha = document.getElementById('signup-password').value;
     var senhaConfirmar = document.getElementById('signup-password-confirm').value;
 
-    if (!email || !senha || !nome || !cpf || !senhaConfirmar) {
-        alert("Favor preencher todos os campos para acessar o site.");
-        event.preventDefault();
-        return;
-    }
+
 
     // Validação do e-mail
     if (!emailValido(email)) {
