@@ -1,0 +1,75 @@
+
+    
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+ 
+  }
+      
+   body{
+      height: 100vh;
+      background: linear-gradient( #0C356A 10%,  #ffffff 10%);
+      
+   }
+ 
+   nav.menu-lateral{
+      width: 300px;
+      height: 100%;
+      background: linear-gradient( #06264F 10%,  #E6E6E6 10%);
+      padding: 20px 0 40px 1%;
+
+      position: fixed;
+      top: 0;
+      left: 0;   
+   }
+
+   .btn-expandir{
+      display: flex;
+      width: 100%;
+      padding-left: 10px;
+      background-color: #06264F;
+   }
+   ul {
+      margin-top: 105px;
+   
+   }
+
+   .btn-expandir > i {
+      color: rgb(255, 255, 255);
+      font-size: 30px;
+      cursor: pointer;
+   }
+   ul{
+      height: 100%;
+      list-style-type: none;
+
+   }
+   ul li.item-menu{
+      transition:  .1s;
+   }
+   ul li.item-menu :hover{
+   background-color: #D6D9F2;
+
+   }
+   ul li.item-menu a {
+      color: #0C356A;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 20px 4%;
+      display: flex;
+      margin-bottom: 40px;
+      line-height: 40px;
+      
+   }
+   ul li.item-menu a .txt-link {
+      margin-left: 30px;
+      font-size: 25px;
+   }
+   ul li.item-menu a .icon{
+      font-size: 30px;
+      position: relative;
+   }
