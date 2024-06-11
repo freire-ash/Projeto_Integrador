@@ -13,9 +13,10 @@ h2 {
  
 form#frente {
     background-color: #2D588E;
-    padding: 300px;
-    padding-left: 1100px;
+    padding-left: 1150px;
     text-align: center;
+    height: 500px;
+ 
        
     position: absolute;
     top: 15%;
@@ -47,21 +48,21 @@ button {
  
 button#b1 {
     position: absolute;
-    top: 25%;
+    top: 30%;
     text-align: left;
     width: 500px;
 }
  
 button#b2 {
     position: absolute;
-    top: 40%;
+    top: 50%;
     text-align: left;
     width: 500px;
 }
  
 button#b3{
     position: absolute;
-    top: 55%;
+    top: 70%;
     text-align: left;
     width: 500px;
 }
