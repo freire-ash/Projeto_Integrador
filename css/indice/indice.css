@@ -1,28 +1,31 @@
 
     
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-.fredoka {
-  font-family: "Fredoka", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
     *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Outfit', sans-serif;
+      font-family: "Fredoka", sans-serif;
  
   }
-     
+  .cor_azul {
+   border-bottom: 93px solid #0C356A;
+   /* Define a borda inferior */
+   position: absolute;
+   left: 14.8%;
+   width: 85.2%;
+   height: 11px;
+   top: 0px;
+     /* Adiciona espaço acima e abaixo da linha */
+}
  
    nav.menu-lateral{
       width: 200px;
       height: 100%;
       background: linear-gradient( #06264F 10%,  #E6E6E6 10%);
       padding: 20px 0 40px 1%;
+      font-weight: 600; 
       top: 0;
       left: 0;   
    }
@@ -34,6 +37,7 @@
       padding-left: 26px;
       color: #ffffff;
       font-size: 20;
+      font-weight: 150;
       margin-left: 30px;
    }
    ul {
@@ -75,4 +79,5 @@
    ul li.item-menu a .icon{
       font-size: 30px;
       position: relative;
+
    }
