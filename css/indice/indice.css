@@ -10,10 +10,11 @@
  
   }
   .cor_azul {
-   border-bottom: 93px solid #0C356A;
+   border-bottom: 91px solid #0C356A;
    /* Define a borda inferior */
    position: absolute;
-   left: 14.8%;
+   position: fixed;
+   left: 14.6%;
    width: 85.2%;
    height: 11px;
    top: 0px;
@@ -21,10 +22,11 @@
 }
  
    nav.menu-lateral{
+      position: fixed;
       width: 200px;
       height: 100%;
-      background: linear-gradient( #06264F 10%,  #E6E6E6 10%);
-      padding: 20px 0 40px 1%;
+      background: linear-gradient( #06264F 15.2%,  #E6E6E6 10%);
+      padding: 31px 0 50px 1%;
       font-weight: 600; 
       top: 0;
       left: 0;   
@@ -36,6 +38,7 @@
       margin-top: 12px;
       padding-left: 26px;
       color: #ffffff;
+      position: fixed;
       font-size: 20;
       font-weight: 150;
       margin-left: 30px;
@@ -66,9 +69,9 @@
       color: #0C356A;
       text-decoration: none;
       font-size: 20px;
-      padding: 20px 4%;
+      padding: 10px 4%;
       display: flex;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       line-height: 40px;
       
    }
@@ -81,3 +84,5 @@
       position: relative;
 
    }
+
+  
