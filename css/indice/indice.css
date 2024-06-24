@@ -1,28 +1,33 @@
 
     
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-.fredoka {
-  font-family: "Fredoka", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
     *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Outfit', sans-serif;
+      font-family: "Fredoka", sans-serif;
  
   }
-     
+  .cor_azul {
+   border-bottom: 91px solid #0C356A;
+   /* Define a borda inferior */
+   position: absolute;
+   position: fixed;
+   left: 14.6%;
+   width: 85.2%;
+   height: 11px;
+   top: 0px;
+     /* Adiciona espaço acima e abaixo da linha */
+}
  
    nav.menu-lateral{
+      position: fixed;
       width: 200px;
       height: 100%;
-      background: linear-gradient( #06264F 10%,  #E6E6E6 10%);
-      padding: 20px 0 40px 1%;
+      background: linear-gradient( #06264F 15.2%,  #E6E6E6 10%);
+      padding: 31px 0 50px 1%;
+      font-weight: 600; 
       top: 0;
       left: 0;   
    }
@@ -33,7 +38,9 @@
       margin-top: 12px;
       padding-left: 26px;
       color: #ffffff;
+      position: fixed;
       font-size: 20;
+      font-weight: 150;
       margin-left: 30px;
    }
    ul {
@@ -62,9 +69,9 @@
       color: #0C356A;
       text-decoration: none;
       font-size: 20px;
-      padding: 20px 4%;
+      padding: 10px 4%;
       display: flex;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       line-height: 40px;
       
    }
@@ -75,4 +82,7 @@
    ul li.item-menu a .icon{
       font-size: 30px;
       position: relative;
+
    }
+
+  
