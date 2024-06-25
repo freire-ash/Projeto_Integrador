@@ -189,7 +189,7 @@ input[type=radio], input[type=checkbox]  {
 <body> 
     
     <h2>Salário</h2>
-    <form>
+    <form id="questionario">
        
         <h1 id="texto1">Quanto e o seu ganho?</h1>
         <input type="number" placeholder="Digite: R$00.00" id="campo1">
@@ -211,7 +211,18 @@ input[type=radio], input[type=checkbox]  {
         
       
     </form>
+    <script>
+        document.getElementById("questionario").addEventListener("button", function(event) {
+            const campo1 = document.getElementById('campo1').value;
+            const periodo = document.querySelector('input[name="periodo"]:checked');
 
+            if (campo1 === "" || !periodo) {
+                alert("Por favor, preencha todos os campos antes de enviar.");
+            } else {
+                window.location.href = 'aviso1.html'; // Redireciona para outra página
+            }
+        });
+    </script>
 
 </body>
 
