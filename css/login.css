@@ -219,3 +219,40 @@
             background: #FFD23F;
             transform: translateX(-30%);
         }
+
+        /* Add this to the end of the login.css file */
+@media only screen and (max-width: 768px) {
+    .imagem-container {
+           display: none;
+       }
+    .forms-section {
+           padding: 20px;
+       }
+    .forms {
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: center;
+       }
+    .form-wrapper {
+           width: 45%;
+           margin: 10px;
+       }
+    .form {
+           width: 100%;
+       }
+    .input-block {
+           width: 100%;
+       }
+    .btn-login,.btn-signup {
+           width: 100%;
+           font-size: 14px;
+           padding: 10px;
+       }
+      input[type="text"], input[type="email"], input[type="password"] {
+           font-size: 14px;
+           padding: 10px;
+       }
+      label {
+           font-size: 14px;
+       }
+   }

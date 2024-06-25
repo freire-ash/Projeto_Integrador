@@ -4,9 +4,8 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>salario</title>
+    <title>aviso1</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../../css/perguntas/style3.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
@@ -16,14 +15,19 @@
         
 
         <style>
-            body {
+                  body {
                 background-color: #0C356A;
             }
 
             h2 {
                 color: #fff;
                 font-size: 35px;
-
+                color: #fff;
+                position: absolute;
+                left: 7%;
+                top: 5%;
+                font-size: 50px;
+                left: 60px;
                 font-family: "Fredoka", sans-serif;
                 font-weight: 700;
             }
@@ -31,53 +35,60 @@
             h1 {
                 color: #fff;
             }
+ 
+            form{
+    background-color: #2D588E;
+    width: 1700px;
+    height: 750px;
 
-            button {
-                border-radius: 10px;
-                border-color: #FAC710;
-                
-                font-size: 35px;
-
-                font-family: "Fredoka", sans-serif;
-                font-weight: 700;
-            }
-
-            div {
-                color: #fff;
-                font-size: 40px;
-
-                position: absolute;
-                top: 50%;
-                left: 50px;
-
-                font-family: "Fredoka", sans-serif;
-                font-weight: 700;
-            }
-
-            input#campo1{
-                font-family: "Fredoka", sans-serif;
-                font-weight: 700;
-            }
+    position: absolute;
+    left: 50px;
+    top: 60px;
+ 
+}
+ 
+h1 {
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    font-size: 50px;
+    left: 60px;
+    color: #fff;
+    margin-top:150px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
+        
             img{
                 position: absolute;
                 top: 60%;
                 left: 80%;
             }
-
+            @media only screen and (max-width: 768px) {
+                form {
+                    width: 100vw;
+                    height: 100vh;
+                    left: 0;
+                    top: 0;
+                }
+                h2 {
+                    font-size: 20px;
+                }
+                h1 {
+                    font-size: 20px;
+                }
+            }
+            
         </style>
 </head>
 
 <body> 
     
-
     <form>
        
-        <h1 id="texto1">Aviso</h1>
-    
-        <h1 id="texto2">Não nos responsabilizamos pelos erros de calculo, tenha certeza que os seus dados
+        <h2 >Aviso</h2>
+        <h1> Não nos responsabilizamos pelos erros de calculo, tenha certeza que os seus dados
             estão  sendo corretamente atualizados.</h1>
-
-   
     </form>
 
 </body>
