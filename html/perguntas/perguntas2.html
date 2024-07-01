@@ -61,46 +61,29 @@ margin: 20px;
     font-weight: 700;
 }
 
+
 button {
-    color: #fff;
-    background-color: #FAC710;
-    border-radius: 25px;
-    border-color: #FAC710;
-    padding: 23px;
-    font-size: 40px;
     height: 90px;
+            display: block;
+            width: 50%;
+            max-width: 400px;
+            margin:23px;
+            padding: 23px;
+
+            font-size: 18px;
+            color: #fff;
+            background-color: #FAC710;
+  border: none;
+            border-radius: 25px;
+            text-align: center;
+            cursor: pointer;
+            font-family: "Fredoka", sans-serif;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+
  
-    position: absolute;
-    left: 90px;
-    top: 100;
-}
- 
-button#b1 {
-    position: absolute;
-    top: 30%;
-    text-align: center;
-    width: 500px;
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-}
- 
-button#b2 {
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    width: 500px;
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-}
- 
-button#b3{
-    position: absolute;
-    top: 70%;
-    text-align: center;
-    width: 500px;
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-}
 /* Add this to the end of the CSS file */
       @media only screen and (max-width: 768px) {
         form#frente {
@@ -113,55 +96,32 @@ button#b3{
           left: 20px;
         }
         h1{
-            left: 3px;
+            left: 10px;
             font-size: 20px;
-            width: 200%;             /* Define a largura do h1 como 80% do contêiner pai */
-            max-width: 180px; 
+            width: 500%;             /* Define a largura do h1 como 80% do contêiner pai */
+            max-width:400px; 
+            max-height: 300px;
         }
         input#campo1 {
-          width: 30%;
-          left: 10%;
+          width: 20%;
+          left: 5%;
         }
         button {
          
     color: #fff;
-    background-color: #FAC710;
-    border-radius: 10px;
-    border-color: #FAC710;
-    padding: 0px 30px;   /* Reduz o padding */
-    font-size: 15px;      /* Reduz o tamanho da fonte */
-    height: 20px;         /* Reduz a altura */
     position: absolute;
-    left: 0px;
-    top: 100px;         
+    left: 20px;
+    top: 50px;    
+           font-size: 20px;
             width: 10%;          /* Define a largura da div como 50% do contêiner pai */
-            height: auto;        /* Define a altura automática baseada no conteúdo */
-            max-height: 100px;   /* Define a altura máxima da div */
-            max-width: 200px;    /* Define a largura máxima da div */
-    padding: 10px;       /* Define o preenchimento interno */
+            height: auto; 
+            height: 60px;       /* Define a altura automática baseada no conteúdo */
+            max-height: 50px;   /* Define a altura máxima da div */
+            max-width: 100px;    /* Define a largura máxima da div */
+    padding: 20px;       /* Define o preenchimento interno */
     margin: 10px auto;   /* Define a margem superior e inferior de 10px e centraliza horizontalmente */
 }
-        }
-
-      button#b1{
-        position: absolute;
-        top: 20%;
-        left: 2%;
-      }
-      button#b2{
-        position: absolute;
-        top: 30%;
-        left: 2%;
-        
-    }
-
-    button#b3{
-        position: absolute;
-        top: 40%;
-        left: 2%;
-        
-    }
-
+}
         </style>
 </head>
 
@@ -172,11 +132,11 @@ button#b3{
 <form action="perguntas3.html" id="frente">
     <h1>Qual é seu objetivo financeiro ?</h1>
     <div>
-    <a href="perguntas3.html"><button id="b1">Começar a economizar</button></a>
+    <a href="perguntas3.html"><button >Começar a economizar</button></a>
     <br><br>
-    <a href="perguntas3.html"><button id="b2">Fazer faculdade/estudo</button></a>
+    <a href="perguntas3.html"><button >Fazer faculdade/estudo</button></a>
     <br><br>
- <a href="perguntas3.html"><button id="b3">Aprender a investir</button></a>
+ <a href="perguntas3.html"><button >Aprender a investir</button></a>
 </div>
 </form>
 
@@ -186,4 +146,3 @@ button#b3{
 </body>
 
 </html>
-
