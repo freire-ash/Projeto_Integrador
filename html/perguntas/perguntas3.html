@@ -1,229 +1,235 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>perguntas3</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-        <style>
-            
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+      form {
+        background-color: #2d588e;
+        width: 1250px;
+        height: 500px;
 
-form {
-    background-color: #2D588E;
-    width: 1700px;
-    height: 750px;
+        position: absolute;
+        left: 50px;
+        top: 60px;
+      }
 
-    position: absolute;
-    left: 50px;
-    top: 60px;
-    
-}
+      h2 {
+        position: absolute;
+        left: 60px;
+        top: 20px;
+        color: #fff;
+        font-size: 35px;
 
-h2 {
-    position: absolute;
-    left: 60px;
-    top: 20px;
-    color: #fff;
-                font-size: 35px;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+      }
 
-                font-family: "Fredoka", sans-serif;
-                font-weight: 700;
-}
+      h1#texto1 {
+        position: absolute;
+        top: 25px;
+        left: 25px;
 
-h1#texto1 {
-    position: absolute;
-    top: 25px;
-    left: 25px;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+      }
 
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-}
+      input#campo1 {
+        background-color: #2d588e;
+        border-radius: 10px;
+        border-color: #fff;
+        font-size: 25px;
 
-input#campo1 {
-    background-color: #2D588E;
-    border-radius: 10px;
-    border-color: #fff;
-    font-size: 25px;
+        width: 475px;
+        height: 50px;
 
-    width: 475px;
-    height: 50px;
+        position: absolute;
+        top: 105px;
+        left: 25px;
 
-    position: absolute;
-    top: 105px;
-    left: 25px;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+      }
 
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-}
+      h1#texto2 {
+        position: absolute;
+        top: 175px;
+        left: 25px;
 
-h1#texto2 {
-    position: absolute;
-    top: 175px;
-    left: 25px;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+      }
 
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-}
+      input::placeholder {
+        color: #cfcbcb;
+      }
 
-input::placeholder {
-    color: #cfcbcb;
-    
-}
+      input[type="radio"] {
+        position: center;
+        accent-color: rgb(251, 255, 0);
+        border-color: 12px rgb(251, 255, 0);
+      }
 
-input[type='radio'] {
-    position: center;
-    accent-color: rgb(251, 255, 0);
-    border-color: 12px rgb(251, 255, 0);
-  
-  }
+      input[type="radio"]::before {
+        background-color: rgb(255, 238, 0);
+      }
 
-  input[type="radio"]::before {
-    background-color: rgb(255, 238, 0);
-  }
+      button {
+        background-color: #fac710;
+        border-radius: 10px #fac710;
+        color: #fff;
 
-button {
-    background-color: #FAC710;
-    border-radius: 10px #FAC710;
-    color: #fff;
+        width: 285px;
+        height: 85px;
 
-    width: 275px;
-    height: 75px;
+        position: absolute;
+        top: 78%;
+        left: 40%;
 
-    position: absolute;
-    top: 83%;
-    left: 40%;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+      }
 
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-}
+      input[type="radio"],
+      input[type="checkbox"] {
+        border: 0px;
+        width: 25px;
+        height: 25px;
+      }
+      body {
+        background-color: #0c356a;
+      }
 
+      h1 {
+        color: #fff;
+        margin: 20px;
+      }
 
+      button {
+        border-radius: 10px;
+        border-color: #fac710;
 
-input[type=radio], input[type=checkbox]  {
-    border: 0px;
-    width: 25px;
-    height: 25px;
-} 
-            body {
-                background-color: #0C356A;
-                
-            }
+        font-size: 35px;
+        margin: 20px;
 
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+      }
 
+      div {
+        margin: 20px;
 
-            h1 {
-                color: #fff;
-                margin: 20px;
+        color: #fff;
+        font-size: 40px;
 
-            }
+        position: absolute;
+        top: 50%;
+        left: 50px;
 
-            button {
-                border-radius: 10px;
-                border-color: #FAC710;
-                
-                font-size: 35px;
-                margin: 20px;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+      }
 
-                font-family: "Fredoka", sans-serif;
-                font-weight: 700;
-            }
+      input#campo1 {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+        margin: 20px;
+      }
+      /* Add this to the end of the CSS file */
+      @media only screen and (max-width: 768px) {
+        form {
+          width: 100%;
+          height: 100vh;
+          left: 0;
+          top: 0;
+        }
+        h2 {
+          left: 20px;
+        }
+        input#campo1 {
+          width: 80%;
+          left: 10%;
+        }
+        button {
+          width: 80%;
+          left: 10%;
+        }
+        div {
+          left: 10%;
+        }
+      }
+    </style>
+  </head>
 
-            div {
-                margin: 20px;
-
-                color: #fff;
-                font-size: 40px;
-
-                position: absolute;
-                top: 50%;
-                left: 50px;
-
-                font-family: "Fredoka", sans-serif;
-                font-weight: 700;
-            }
-
-            input#campo1{
-                font-family: "Fredoka", sans-serif;
-                font-weight: 700;
-                margin: 20px;
-
-            }
-/* Add this to the end of the CSS file */
-@media only screen and (max-width: 768px) {
-    form {
-        width: 100%;
-        height: 100vh;
-        left: 0;
-        top: 0;
-    }
-    h2 {
-        left: 20px;
-    }
-    input#campo1 {
-        width: 80%;
-        left: 10%;
-    }
-    button {
-        width: 80%;
-        left: 10%;
-    }
-    div {
-        left: 10%;
-    }
-}
-        </style>
-</head>
-
-<body> 
-    
+  <body>
     <h2>Salário</h2>
     <form id="questionario">
-       
-        <h1 id="texto1">Quanto e o seu ganho?</h1>
-        <input type="number" placeholder="Digite: R$00.00" id="campo1">
-        <h1 id="texto2">Qual o periodo do seu ganho?</h1>
-        
-        <div>
-            <input type="radio" id="prototipo1" name="prototipo" value="perguntas">
-            <label for="perguntas">mês</label><br>
+      <h1 id="texto1">Quanto e o seu ganho?</h1>
+      <input type="number" placeholder="Digite: R$00.00" id="campo1" />
+      <h1 id="texto2">Qual o periodo do seu ganho?</h1>
 
-            <input type="radio" id="prototipo2" name="prototipo" value="perguntas">
-            <label for="perguntas">dia</label><br>
+      <div>
+        <input
+          type="radio"
+          id="prototipo1"
+          name="prototipo"
+          value="perguntas"
+        />
+        <label for="perguntas">mês</label><br />
 
-            <input type="radio" id="prototipo3" name="prototipo" value="perguntas">
-            <label for="perguntas">semana</label><br>
-            
-        </div>
-        <button type="button" onclick="window.location.href='aviso1.html'">Enviar</button>
+        <input
+          type="radio"
+          id="prototipo2"
+          name="prototipo"
+          value="perguntas"
+        />
+        <label for="perguntas">dia</label><br />
 
-        
-      
+        <input
+          type="radio"
+          id="prototipo3"
+          name="prototipo"
+          value="perguntas"
+        />
+        <label for="perguntas">semana</label><br />
+      </div>
+      <button type="button" onclick="window.location.href='aviso1.html'">
+        Enviar
+      </button>
     </form>
     <script>
-        document.getElementById("questionario").addEventListener("button", function(event) {
-            const campo1 = document.getElementById('campo1').value;
-            const periodo = document.querySelector('input[name="periodo"]:checked');
+      document
+        .getElementById("questionario")
+        .addEventListener("button", function (event) {
+          const campo1 = document.getElementById("campo1").value;
+          const periodo = document.querySelector(
+            'input[name="periodo"]:checked'
+          );
 
-            if (campo1 === "" || !periodo) {
-                alert("Por favor, preencha todos os campos antes de enviar.");
-            } else {
-                window.location.href = 'aviso1.html'; // Redireciona para outra página
-            }
+          if (campo1 === "" || !periodo) {
+            alert("Por favor, preencha todos os campos antes de enviar.");
+          } else {
+            window.location.href = "aviso1.html"; // Redireciona para outra página
+          }
         });
     </script>
-
-</body>
-
+  </body>
 </html>
