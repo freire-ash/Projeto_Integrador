@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Fredoka", sans-serif;
+ 
+  }
+  .cor_azul {
+   border-bottom: 91px solid #0C356A;
+   /* Define a borda inferior */
+   position: absolute;
+   position: fixed;
+   left: 14.6%;
+   width: 85.2%;
+   height: 11px;
+   top: 0px;
+     /* Adiciona espaço acima e abaixo da linha */
+}
+ 
+   nav.menu-lateral{
+      position: fixed;
+      width: 200px;
+      height: 100%;
+      background: linear-gradient( #06264F 15.2%,  #E6E6E6 10%);
+      padding: 31px 0 50px 1%;
+      font-weight: 600; 
+      top: 0;
+      left: 0;   
+   }
+
+   .btn-expandir{
+      display: flex;
+      width: 50px;
+      margin-top: 12px;
+      padding-left: 26px;
+      color: #ffffff;
+      position: fixed;
+      font-size: 20;
+      font-weight: 150;
+      margin-left: 30px;
+   }
+   ul {
+      margin-top: 105px;
+   
+   }
+
+   .btn-expandir > i {
+      color: rgb(255, 255, 255);
+      font-size: 30px;
+      cursor: pointer;
+   }
+   ul{
+      height: 100%;
+      list-style-type: none;
+
+   }
+   ul li.item-menu{
+      transition:  .1s;
+   }
+   ul li.item-menu :hover{
+   background-color: #D6D9F2;
+
+   }
+   ul li.item-menu a {
+      color: #0C356A;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 10px 4%;
+      display: flex;
+      margin-bottom: 20px;
+      line-height: 40px;
+      
+   }
+   ul li.item-menu a .txt-link {
+      margin-left: 10px;
+      font-size: px;
+   }
+   ul li.item-menu a .icon{
+      font-size: 30px;
+      position: relative;
+
+   }
+
+   li#obj{
+      background-color: #D6D9F2;
+   }
+
+   h1#tx1{
+    background-color: bisque;
+   }
+
+main#list{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+}
+
+h1#txt2{
+   color: #06264F;
+   
+   position: absolute;
+   top: -150px;
+   font-size: 50px;
+}
+
+h2#txt1{
+   position: absolute;
+   left: -400px;
+   top: -70px;
+}
+
+h2#txt2{
+   position: absolute;
+   top:-70px ;
+   left: -175px;
+}
+
+h2#txt3{
+   position: absolute;
+   top: -70px;
+   left: 20px;
+}
+
+img{
+   height: 45px;
+   position: absolute;
+   left: -400px;
+   top: -30px;
+}
+
+div#fundo1{
+   background-color: #B8CBE3;
+   width: 300px;
+   height: 200px;
+
+   position: absolute;
+   left: 300px;
+}
+
+h2#txt4{
+   color: #06264F;
+   font-size: 25px;
+
+   position: absolute;
+   left: 25px;
+   top: 10px;
+}
+
+h2#txt5{
+   color: #06264F;
+   font-size: 25px;
+
+   position: absolute;
+   left: 10px;
+   top: 100px;
+}
+
