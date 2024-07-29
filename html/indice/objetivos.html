@@ -8,15 +8,90 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel='stylesheet' media='screen' href='../../css/indice/objetivos.css'>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .wishlist-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .progress-bar {
+            background-color: #eee;
+            height: 10px;
+            border-radius: 5px;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            background-color: #4CAF50;
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .check-box {
+            display: flex;
+            align-items: center;
+            width: 50px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #999;
+        }
+    </style>
 </head>
 
 <body>
+    <header class="cor_azul">
+    </header>
 
     <nav class="menu-lateral">
         <div class="btn-expandir">
             <h1>Índice</h1>
-        </div>
-        <div class="cor_azul">
         </div>
         <ul>
             <li class="item-menu">
@@ -58,24 +133,141 @@
             </li>
         </ul>
     </nav>
-    <h1 id="tx1">Objetivos</h1>
+
     <main id="list">
-        <h1 id="txt2">WISHLIST</h1>
-        <form action="">
-             <h2 id="txt1">O que eu quero</h2>
-             <h2 id="txt2">Quanto custa ?</h2>
-             <h2 id="txt3">Conquistei</h2>
-             <img src="../../imagens/mais.png" alt="">
-        </form>
-        <div id="fundo1">
-           <h2 id="txt4"> Wishlist conquistadas</h2>
-           <form action=""></form>
-           <h2 id="txt5">Wishlist não complestas</h2>
-           <form action=""></form>
+        <h1 id="h1txt1">WISHLIST</h1>
+        <div class="container" id="fundo1">
+            <div class="wishlist-section">
+                <h2>O que eu quero</h2>
+                <div class="item" id="item1">
+                    <input type="text" placeholder="Item 1" id="item1-text">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress1"></div>
+                    </div>
+                </div>
+                <div class="item" id="item2">
+                    <input type="text" placeholder="Item 2" id="item2-text">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress2"></div>
+                    </div>
+                </div>
+                <div class="item" id="item3">
+                    <input type="text" placeholder="Item 3" id="item3-text">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress3"></div>
+                    </div>
+                </div>
+                <div class="item" id="item4">
+                    <input type="text" placeholder="Item 4" id="item4-text">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress4"></div>
+                    </div>
+                </div>
+                <div class="item" id="item5">
+                    <input type="text" placeholder="Item 5" id="item5-text">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress5"></div>
+                    </div>
+                </div>
+                <button id="add-item">Adicionar Item</button>
+            </div>
+            <div class="wishlist-section">
+                <h2>Conquistei</h2>
+                <div class="check-box" id="checkbox1">
+                    <input type="checkbox" id="checkbox1-input">
+                    <label for="checkbox1-input">Item 1</label>
+                </div>
+                <div class="check-box" id="checkbox2">
+                    <input type="checkbox" id="checkbox2-input">
+                    <label for="checkbox2-input">Item 2</label>
+                </div>
+                <div class="check-box" id="checkbox3">
+                    <input type="checkbox" id="checkbox3-input">
+                    <label for="checkbox3-input">Item 3</label>
+                </div>
+                <div class="check-box" id="checkbox4">
+                    <input type="checkbox" id="checkbox4-input">
+                    <label for="checkbox4-input">Item 4</label>
+                </div>
+                <div class="check-box" id="checkbox5">
+                    <input type="checkbox" id="checkbox5-input">
+                    <label for="checkbox5-input">Item 5</label>
+                </div>
+            </div>
         </div>
-        <h1>Investimento</h1>pão
         
+        <h1 id="h1txt2">Investimento</h1>
+        <h2 id="h2txt1">Meta 1</h2>
+        <h3 >Progresso</h3>
+        <form action="define" id="form1">
+            <img src="../../imagens/black-star.png" alt="" id="img1">
+            <h2 id="h2txt2">R$ 00.00</h2>
+        </form>
+        <img src="../../imagens/muda.png" alt="" id="img2">
+
+        <form action="define" id="form2">
+            <h2 id="h2txt3">Quantidade investido</h2>
+            <div id="div1">
+                <h2 id="h2txt4">R$ 00.00</h2>
+            </div>
+        </form>
+
     </main>
+    <script>
+        const itemsContainer = document.querySelector('.wishlist-section:first-child');
+        const addItemButton = document.getElementById('add-item');
+        const checkboxes = document.querySelectorAll('.check-box');
+
+        addItemButton.addEventListener('click', () => {
+            const newItemCount = itemsContainer.querySelectorAll('.item').length + 1;
+            const newItem = document.createElement('div');
+            newItem.classList.add('item');
+            newItem.innerHTML = `
+                <input type="text" placeholder="Item ${newItemCount}" id="item${newItemCount}-text">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress${newItemCount}"></div>
+                </div>
+            `;
+            itemsContainer.appendChild(newItem);
+
+            // Criar um novo checkbox
+            const newCheckbox = document.createElement('div');
+            newCheckbox.classList.add('check-box');
+            newCheckbox.innerHTML = `
+                <input type="checkbox" id="checkbox${newItemCount}-input">
+                <label for="checkbox${newItemCount}-input">Item ${newItemCount}</label>
+            `;
+            const checkboxesContainer = document.querySelector('.wishlist-section:last-child');
+            checkboxesContainer.appendChild(newCheckbox);
+
+            // Adicionar event listener ao checkbox
+            const newCheckboxInput = newCheckbox.querySelector('input[type="checkbox"]');
+            newCheckboxInput.addEventListener('change', () => {
+                const itemIndex = newItemCount - 1;
+                if (newCheckboxInput.checked) {
+                    itemsContainer.querySelectorAll('.item')[itemIndex].querySelector('input[type="text"]').classList.add('completed');
+                    document.getElementById(`progress${newItemCount}`).style.width = '100%';
+                } else {
+                    itemsContainer.querySelectorAll('.item')[itemIndex].querySelector('input[type="text"]').classList.remove('completed');
+                    document.getElementById(`progress${newItemCount}`).style.width = '0%';
+                }
+            });
+        });
+
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.querySelector('input[type="checkbox"]').addEventListener('change', () => {
+                const itemIndex = index;
+                const checkboxInput = checkbox.querySelector('input[type="checkbox"]');
+                if (checkboxInput.checked) {
+                    itemsContainer.querySelectorAll('.item')[itemIndex].querySelector('input[type="text"]').classList.add('completed');
+                    document.getElementById(`progress${index + 1}`).style.width = '100%';
+                } else {
+                    itemsContainer.querySelectorAll('.item')[itemIndex].querySelector('input[type="text"]').classList.remove('completed');
+                    document.getElementById(`progress${index + 1}`).style.width = '0%';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

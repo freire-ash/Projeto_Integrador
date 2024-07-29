@@ -1,159 +1,222 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Fredoka", sans-serif;
- 
-  }
-  .cor_azul {
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
+
+}
+
+.cor_azul {
    border-bottom: 91px solid #0C356A;
+   z-index: 999;
    /* Define a borda inferior */
-   position: absolute;
    position: fixed;
    left: 14.6%;
    width: 85.2%;
    height: 11px;
    top: 0px;
-     /* Adiciona espaço acima e abaixo da linha */
+   /* Adiciona espaço acima e abaixo da linha */
 }
- 
-   nav.menu-lateral{
-      position: fixed;
-      width: 200px;
-      height: 100%;
-      background: linear-gradient( #06264F 15.2%,  #E6E6E6 10%);
-      padding: 31px 0 50px 1%;
-      font-weight: 600; 
-      top: 0;
-      left: 0;   
-   }
 
-   .btn-expandir{
-      display: flex;
-      width: 50px;
-      margin-top: 12px;
-      padding-left: 26px;
-      color: #ffffff;
-      position: fixed;
-      font-size: 20;
-      font-weight: 150;
-      margin-left: 30px;
-   }
-   ul {
-      margin-top: 105px;
-   
-   }
+nav.menu-lateral {
+   position: fixed;
+   width: 200px;
+   height: 100%;
+   background: linear-gradient(#06264F 15.2%, #E6E6E6 10%);
+   padding: 31px 0 50px 1%;
+   font-weight: 600;
+   top: 0;
+   left: 0;
+}
 
-   .btn-expandir > i {
-      color: rgb(255, 255, 255);
-      font-size: 30px;
-      cursor: pointer;
-   }
-   ul{
-      height: 100%;
-      list-style-type: none;
+.btn-expandir {
+   display: flex;
+   width: 50px;
+   margin-top: 12px;
+   padding-left: 26px;
+   color: #ffffff;
+   position: fixed;
+   font-size: 20;
+   font-weight: 150;
+   margin-left: 30px;
+}
 
-   }
-   ul li.item-menu{
-      transition:  .1s;
-   }
-   ul li.item-menu :hover{
+ul {
+   margin-top: 105px;
+
+}
+
+.btn-expandir>i {
+   color: rgb(255, 255, 255);
+   font-size: 30px;
+   cursor: pointer;
+}
+
+ul {
+   height: 100%;
+   list-style-type: none;
+
+}
+
+ul li.item-menu {
+   transition: .1s;
+}
+
+ul li.item-menu :hover {
    background-color: #D6D9F2;
 
-   }
-   ul li.item-menu a {
-      color: #0C356A;
-      text-decoration: none;
-      font-size: 20px;
-      padding: 10px 4%;
-      display: flex;
-      margin-bottom: 20px;
-      line-height: 40px;
-      
-   }
-   ul li.item-menu a .txt-link {
-      margin-left: 10px;
-      font-size: px;
-   }
-   ul li.item-menu a .icon{
-      font-size: 30px;
-      position: relative;
+}
 
-   }
+ul li.item-menu a {
+   color: #0C356A;
+   text-decoration: none;
+   font-size: 20px;
+   padding: 10px 4%;
+   display: flex;
+   margin-bottom: 20px;
+   line-height: 40px;
 
-   li#obj{
-      background-color: #D6D9F2;
-   }
+}
 
-   h1#tx1{
-    background-color: bisque;
-   }
+ul li.item-menu a .txt-link {
+   margin-left: 10px;
+   font-size: px;
+}
 
-main#list{
+ul li.item-menu a .icon {
+   font-size: 30px;
+   position: relative;
+
+}
+
+li#obj {
+   background-color: #D6D9F2;
+}
+
+main#list {
    position: absolute;
    left: 50%;
    top: 50%;
 }
 
-h1#txt2{
-   color: #06264F;
-   
+div#fundo1 {
+   background-color: #B8CBE3;
+   width: 800px;
+   height: 400px;
+
    position: absolute;
+   left: -300px;
+   top: -60px;
+}
+
+div {
+   width: 600px;
+   ;
+}
+
+h1#h1txt1 {
+   color: #06264F;
+
+   position: absolute; 
    top: -150px;
    font-size: 50px;
 }
 
-h2#txt1{
+h1#h1txt2 {
    position: absolute;
-   left: -400px;
-   top: -70px;
+   top: 500px;
+   left: 30px;
+
+   color: #06264F;
+   font-size: 30px;
 }
 
-h2#txt2{
-   position: absolute;
-   top:-70px ;
-   left: -175px;
-}
-
-h2#txt3{
-   position: absolute;
-   top: -70px;
-   left: 20px;
-}
-
-img{
-   height: 45px;
-   position: absolute;
-   left: -400px;
-   top: -30px;
-}
-
-div#fundo1{
-   background-color: #B8CBE3;
-   width: 300px;
-   height: 200px;
+h2#h2txt1{
+   width: 100px;
 
    position: absolute;
-   left: 300px;
-}
+   top: 580px;
+   left: 80px;
 
-h2#txt4{
    color: #06264F;
    font-size: 25px;
+}
+
+form#form1{
+   background-color: #FEF445;
 
    position: absolute;
-   left: 25px;
+   left: 35px;
+   top: 650px;
+
+   width: 175px;
+   height: 50px;
+   border-radius: 15px;
+}
+
+img#img1{
+   width: 30px;
+   
+   position: absolute;
+   left: 20px;
    top: 10px;
 }
 
-h2#txt5{
-   color: #06264F;
-   font-size: 25px;
-
+h2#h2txt2{
    position: absolute;
-   left: 10px;
-   top: 100px;
+   left: 75px;
+   top: 15px;
+
+   color: #E18211;
+   font-size: 19px;
 }
 
+img#img2{
+   position: absolute;
+   top: 920px;
+   left: 75px;
+   width: 100px;
+}
+
+body{
+   background-color: #ffffff;
+}
+
+form#form2{
+   background-color: #B8CBE3;
+
+   position: absolute;
+   top: 1025px;
+   left: -40px;
+
+   width: 350px;
+   height: 50px;
+   border-radius: 10px;
+}
+
+div#div1{
+   background-color: #ffffff;
+
+   position: absolute;
+   left: 225px;
+   top: 10px;
+
+   width: 110px;
+   height: 30px;
+   border-radius: 10px;
+}
+
+h2#h2txt3{
+   font-size: 19px;
+
+   position: absolute;
+   top: 15px;
+   left: 10px;
+}
+
+h2#h2txt4{
+   position: absolute;
+   left: 5px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+        }
+
+        .wishlist-table {
+            display: flex;
+            gap: 20px;
+        }
+
+        .item-table {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .item-table input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .item-table .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .wishlist-conquistada {
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .wishlist-conquistada h3 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+
+        .wishlist-conquistada input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WISHLIST</h1>
+    <div class="container">
+        <div class="wishlist-table">
+            <div class="item-table">
+                <h3>O que eu quero</h3>
+                <input type="text">
+                <input type="text">
+                <
