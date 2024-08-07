@@ -91,15 +91,12 @@ ul li.item-menu a .icon {
 
 }
 
-li#obj {
-   background-color: #D6D9F2;
-}
-
 main#list {
    position: absolute;
    left: 50%;
    top: 50%;
 }
+/* informaçoes do meio da tela*/
 
 div#fundo1 {
    background-color: #B8CBE3;
@@ -121,12 +118,14 @@ h1#h1txt1 {
 
    position: absolute; 
    top: -150px;
-   font-size: 50px;
+   left: 50px;
+
+   font-size: 35px;
 }
 
 h1#h1txt2 {
    position: absolute;
-   top: 500px;
+   top: 400px;
    left: 30px;
 
    color: #06264F;
@@ -137,7 +136,7 @@ h2#h2txt1{
    width: 100px;
 
    position: absolute;
-   top: 580px;
+   top: 480px;
    left: 80px;
 
    color: #06264F;
@@ -149,7 +148,7 @@ form#form1{
 
    position: absolute;
    left: 35px;
-   top: 650px;
+   top: 550px;
 
    width: 175px;
    height: 50px;
@@ -175,9 +174,9 @@ h2#h2txt2{
 
 img#img2{
    position: absolute;
-   top: 920px;
-   left: 75px;
-   width: 100px;
+   top: 700px;
+   left: -45px;
+   width: 350px;
 }
 
 body{
@@ -188,7 +187,7 @@ form#form2{
    background-color: #B8CBE3;
 
    position: absolute;
-   top: 1025px;
+   top: 925px;
    left: -40px;
 
    width: 350px;
@@ -210,6 +209,7 @@ div#div1{
 
 h2#h2txt3{
    font-size: 19px;
+   color: #06264F;
 
    position: absolute;
    top: 15px;
@@ -220,3 +220,272 @@ h2#h2txt4{
    position: absolute;
    left: 5px;
 }
+
+li#obj{
+   background-color: #a6c7f1;
+}
+
+h2#h2txt5{
+   position: absolute;
+   left: -450px;
+   top: -70px;
+
+   font-size: 20px;
+}
+
+h2#h2txt6{
+   position: absolute;
+   left: -175px;
+   top: -70px;
+
+   font-size: 20px;
+}
+
+h2#h2txt7{
+   position: absolute;
+   top: -70px;
+
+   font-size: 20px;
+}
+
+button#button1{
+   width: 545px;
+
+   position: absolute;
+   left: -450px;
+   top: -40px;
+}
+
+div#div2{
+   background-color: #B8CBE3;
+   width: 275px;
+   height: 180px;
+   border-radius: 5px;
+   font-size: 15px;
+
+   position: absolute;
+   left: 250px;
+   top: -60px;
+}
+
+h2#h2txt8{
+   position: absolute;
+   left: 40px;
+   top: 20px;
+
+   font-size: 20px;
+   color: #06264F;
+}
+
+div#div3{
+   background-color: #FFFFFF;
+   width: 250px;
+   height: 30px;
+   border-radius: 3px;
+
+
+   position: absolute;
+   left: 10px;
+   top: 50px;
+}
+ 
+h2#h2txt9{
+   position: absolute;
+   left: 55px;
+   top: 90px;
+
+   color: #06264F;
+   font-size: 20px;
+}
+
+div#div4{
+   background-color: #FFFFFF;
+   width: 250px;
+   height: 30px;
+   border-radius: 3px;
+
+
+   position: absolute;
+   left: 10px;
+   top: 125px;
+}
+
+h2#h2txt10{
+   color: #06264F;
+
+   position: absolute;
+   left: -300px;
+   top: 510px;
+}
+
+form#form3{
+   text-align: right;
+   font-size: 11px;
+
+   position: absolute;
+   left: -380px;
+   top: 570px;
+}
+
+form#form4{
+   background-color: #B8CBE3;
+   width: 150px;
+   height: 430px;
+
+   position: absolute;
+   left: -295px;
+   top: 555px;
+}
+
+div#d1{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 10px;
+}
+
+div#d2{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 45px;
+}
+
+div#d3{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 80px;
+}
+
+div#d4{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 115px;
+}
+
+div#d5{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 150px;
+}
+
+div#d6{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 185px;
+}
+
+div#d7{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 220px;
+}
+
+div#d8{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 255px;
+}
+
+div#d9{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 290px;
+}
+
+div#d10{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 325px;
+}
+
+div#d11{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 360px;
+}
+
+div#d12{ 
+   background-color: #fff;
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+
+   position: absolute;
+   left: 14px;
+   top: 395px;
+}
+
+button#button2{
+   background-color: #B8CBE3;
+   width: 70px;
+   height: 60px;
+   border-radius: 20px;
+   border-color: #a6c7f1;
+   
+   position: absolute;
+   left: -250px;
+   top: 1010px;
+}
+
+img#img3{
+   width: 30px;
+
+   position: absolute;
+   top: 1025px;
+   left: -230px;
+}
+
