@@ -51,7 +51,286 @@
         </a>
         </li>
     </nav>
-    <h1>Visão Anual</h1>
-    
+  <style>
+    /* Estilo para os cabeçalhos das seções */
+    .header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    /* Estilo para os botões de adicionar e remover */
+    .add-button, .remove-button {
+      cursor: pointer;
+    }
+    /* Estilo para inputs inválidos de número com formatação de moeda */
+    input[type="number"].currency:invalid {
+      border: 1px solid red;
+    }
+    /* Estilo para o container do gráfico */
+    #chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      
+    }
+    .home{
+      position: relative;
+      left: 30%;
+      top: 100px;
+    }
+  </style>
+  <!-- Inclui a biblioteca Chart.js para criar gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Seção para despesas por categoria -->
+
+  <div class="home">
+
+  <div class="section" id="category-expenses">
+    <div class="header">GASTOS POR CATEGORIA</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Categoria</th>
+          <th>Limite de gastos</th>
+          <th>Valor gasto</th>
+          <th>Porcentagem</th>
+        </tr>
+      </thead>
+      <tbody id="category-expenses-body">
+        <!-- Linhas serão adicionadas aqui -->
+      </tbody>
+    </table>
+    <div>
+      <!-- Botão para adicionar uma nova categoria -->
+      <button class="add-button" onclick="addCategoryRow()">Adicionar Categoria</button>
+    </div>
+  </div>
+
+  <!-- Seção para despesas mensais -->
+  <div class="section" id="monthly-expenses">
+    <div class="header">GASTOS MENSAL</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome do gasto</th>
+          <th>Data de pagamento</th>
+          <th>Categoria</th>
+          <th>Valor</th>
+          <th>Pago</th>
+          <th>Remover</th>
+        </tr>
+      </thead>
+      <tbody id="monthly-expenses-body">
+        <!-- Linhas serão adicionadas aqui -->
+      </tbody>
+    </table>
+    <div>
+      <!-- Botão para adicionar uma nova despesa fixa -->
+      <button class="add-button" onclick="addFixedExpenseRow()">Adicionar Gasto Fixo</button>
+    </div>
+  </div>
+
+  <!-- Container para o gráfico de despesas -->
+  <div id="chart-container">
+    <canvas id="expenseChart"></canvas>
+  </div>
+
+  <script>
+    let expenseChart;
+    const categoryColors = {}; // Objeto para armazenar as cores das categorias
+
+    // Função para gerar uma cor aleatória
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Função para adicionar uma nova linha para despesas fixas
+    function addFixedExpenseRow() {
+      let tableBody = document.getElementById("monthly-expenses-body");
+      let newRow = tableBody.insertRow();
+      newRow.insertCell().innerHTML = '<input type="text" placeholder="Nome do gasto">';
+      newRow.insertCell().innerHTML = '<input type="date">';
+      newRow.insertCell().innerHTML = generateCategoryDropdown();
+      newRow.insertCell().innerHTML = '<input type="number" placeholder="Valor" oninput="updateCategoryExpenses()">';
+      newRow.insertCell().innerHTML = '<input type="checkbox" onclick="updateCategoryExpenses()">';
+      newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteFixedExpenseRow(this)">Remover</button>';
+    }
+
+    // Função para excluir uma linha de despesas fixas
+    function deleteFixedExpenseRow(button) {
+      let row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+      updateCategoryExpenses();
+    }
+
+    // Função para adicionar uma nova linha para despesas por categoria
+    function addCategoryRow() {
+      let tableBody = document.getElementById("category-expenses-body");
+      let newRow = tableBody.insertRow();
+      newRow.insertCell().innerHTML = '<input type="text" placeholder="Categoria" oninput="updateCategoryDropdown()">';
+      newRow.insertCell().innerHTML = '<input type="text" class="currency" placeholder="Limite" onblur="formatCurrency(this); updateCategoryExpenses()">';
+      newRow.insertCell().innerHTML = '<input type="number" placeholder="Gasto" readonly>';
+      newRow.insertCell().innerHTML = '<input type="text" placeholder="Porcentagem" readonly>';
+      newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteRow(this)">Remover</button>';
+      updateCategoryDropdown();
+    }
+
+    // Função para excluir uma linha de despesas por categoria
+    function deleteRow(button) {
+      let row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+      updateCategoryDropdown();
+      updateCategoryExpenses();
+    }
+
+    // Função para atualizar as despesas por categoria
+    function updateCategoryExpenses() {
+      let categoryExpensesBody = document.getElementById("category-expenses-body");
+      let monthlyExpensesBody = document.getElementById("monthly-expenses-body");
+
+      let categoryData = {};
+
+      // Coleta dados das categorias
+      for (let i = 0; i < categoryExpensesBody.rows.length; i++) {
+        let cells = categoryExpensesBody.rows[i].cells;
+        let category = cells[0].getElementsByTagName("input")[0].value;
+        let limit = parseFloat(cells[1].getElementsByTagName("input")[0].value.replace(/[^\d,-]/g, '').replace(',', '.')) || 0;
+        categoryData[category] = { limit: limit, spent: 0 };
+      }
+
+      // Agrega despesas
+      for (let i = 0; i < monthlyExpensesBody.rows.length; i++) {
+        let cells = monthlyExpensesBody.rows[i].cells;
+        let category = cells[2].getElementsByTagName("select")[0].value;
+        let value = parseFloat(cells[3].getElementsByTagName("input")[0].value) || 0;
+        let isPaid = cells[4].getElementsByTagName("input")[0].checked;
+        if (isPaid && categoryData[category]) {
+          categoryData[category].spent += value;
+        }
+      }
+
+      // Atualiza despesas por categoria
+      let labels = [];
+      let data = [];
+      let colors = [];
+      for (let i = 0; i < categoryExpensesBody.rows.length; i++) {
+        let cells = categoryExpensesBody.rows[i].cells;
+        let category = cells[0].getElementsByTagName("input")[0].value;
+        if (categoryData[category]) {
+          let spent = categoryData[category].spent;
+          let limit = categoryData[category].limit;
+          cells[2].getElementsByTagName("input")[0].value = spent.toFixed(2);
+          let percentage = limit > 0 ? ((spent / limit) * 100).toFixed(2) : '0';
+          cells[3].getElementsByTagName("input")[0].value = percentage + '%';
+
+          // Coleta dados para o gráfico
+          labels.push(category);
+          data.push(parseFloat(percentage));
+          if (!categoryColors[category]) {
+            categoryColors[category] = getRandomColor(); // Atribui uma cor aleatória se não estiver definida
+          }
+          colors.push(categoryColors[category]);
+        }
+      }
+
+      // Atualiza o gráfico
+      updateChart(labels, data, colors);
+    }
+
+    // Função para atualizar o dropdown de categorias nas despesas fixas
+    function updateCategoryDropdown() {
+      let categoryExpensesBody = document.getElementById("category-expenses-body");
+      let dropdowns = document.querySelectorAll("#monthly-expenses-body select");
+
+      let categories = [];
+      for (let i = 0; i < categoryExpensesBody.rows.length; i++) {
+        let category = categoryExpensesBody.rows[i].cells[0].getElementsByTagName("input")[0].value;
+        if (category) {
+          categories.push(category);
+        }
+      }
+
+      dropdowns.forEach(function(dropdown) {
+        while (dropdown.firstChild) {
+          dropdown.removeChild(dropdown.firstChild);
+        }
+        categories.forEach(function(category) {
+          let option = document.createElement("option");
+          option.value = category;
+          option.text = category;
+          dropdown.appendChild(option);
+        });
+      });
+    }
+
+    // Função para gerar o dropdown de categorias para uma nova linha de despesas fixas
+    function generateCategoryDropdown() {
+      let categoryExpensesBody = document.getElementById("category-expenses-body");
+      let dropdown = '<select>';
+
+      for (let i = 0; i < categoryExpensesBody.rows.length; i++) {
+        let category = categoryExpensesBody.rows[i].cells[0].getElementsByTagName("input")[0].value;
+        if (category) {
+          dropdown += '<option value="' + category + '">' + category + '</option>';
+        }
+      }
+      dropdown += '</select>';
+
+      return dropdown;
+    }
+
+    // Função para formatar valores como moeda
+    function formatCurrency(input) {
+      let value = parseFloat(input.value.replace(/[^\d,-]/g, '').replace(',', '.'));
+      if (isNaN(value)) {
+        input.value = '';
+      } else {
+        input.value = value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+      }
+    }
+
+    // Função para inicializar e atualizar o gráfico
+    function updateChart(labels, data, colors) {
+      const ctx = document.getElementById('expenseChart').getContext('2d');
+      if (expenseChart) {
+        expenseChart.destroy();
+      }
+      expenseChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Porcentagem de Gastos',
+            data: data,
+            backgroundColor: colors,
+            borderColor: colors.map(color => color.replace('0.2', '1')),
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                callback: function(value) {
+                  return value + '%';
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Atualiza o dropdown de categorias quando o documento é carregado
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCategoryDropdown();
+    });
+  </script>
+</div>
 </body>
 </html>
