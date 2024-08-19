@@ -14,10 +14,10 @@
    /* Define a borda inferior */
    position: absolute;
    position: fixed;
-   left: 14.6%;
+   left: 200px;
    width: 85.2%;
    height: 11px;
-   top: 0px;
+   top: -3px;
      /* Adiciona espaço acima e abaixo da linha */
 }
  
