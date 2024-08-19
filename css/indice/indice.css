@@ -18,6 +18,7 @@
    width: 85.2%;
    height: 11px;
    top: -3px;
+   z-index: 9999;
      /* Adiciona espaço acima e abaixo da linha */
 }
  
