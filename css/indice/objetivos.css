@@ -1,13 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: "Fredoka", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: #f4f4f4;
+}
+.wishlist{
+   position: relative;
+   top: 20px;  /* Move a div 20px para baixo */
+   right: 400px; /* Move a div 30px para a direita */
+}
+ .lista_opcoes {
+   
+      left: 20px;
+   font-family: Arial, sans-serif; 
+   color: #363636; padding: 10px;
 
+   padding: 10px; /* Opcional: Adiciona um pouco de espaçamento interno */
 }
 
+/* Botao de excluir objetivo */
+.remove-button{
+   color: #ffffff;
+   background-color: #f2cf0aa8;
+   border: none;
+   width: 70px;
+   font-size: 20px;
+
+   height: 23px;
+   border-radius: 4px;
+
+}
+/* Botao de adcionar objetivo */
+.add-button{
+   color: #0C356A;
+   background-color: #B8CBE3;
+   border: none;
+   width: 70px;
+   font-size: 20px;
+word-spacing: 20px;
+   height: 23px;
+   border-radius: 4px;
+}
+   
+.custom-checkbox {
+   position: relative;
+   width: 20px;
+   height: 20px;
+   
+}
+/* CAMPO PARA A ESCRITA */
+input[type="text"] {
+   border: 1px solid #ccc;
+   padding: 10px;
+   right: 30px;
+   border-radius: 5px;
+   width: 100%;
+   box-sizing: border-box;
+
+      display: grid;
+      gap: 500px; /* Adiciona 20px de espaço entre as linhas e colunas da grade */
+  
+}
+
+input[type="number"] {
+   border: 1px solid #ccc;
+   padding: 10px;
+   border-radius: 5px;
+   width: 100%;
+   box-sizing: border-box;
+}
+.container {
+   display: flex;
+   gap: 30px;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-section {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+h2 {
+   color: #333;
+}
+
+.item {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+
+
+
+
+.progress-bar {
+   background-color: #eee;
+   height: 10px;
+   border-radius: 5px;
+   width: 100%;
+   overflow: hidden;
+   margin-top: 10px;
+}
+
+.progress-fill {
+   background-color: #4CAF50;
+   height: 100%;
+   width: 0%;
+   transition: width 0.5s ease;
+}
+
+.check-box {
+   display: flex;
+   align-items: center;
+   width: 50px;
+}
+
+input[type="checkbox"] {
+   margin-right: 5px;
+}
+
+.completed {
+   text-decoration: line-through;
+   color: #999;
+}
 .cor_azul {
    border-bottom: 91px solid #0C356A;
    z-index: 999;
@@ -127,14 +251,20 @@ h1#h1txt2 {
    position: absolute;
    top: 400px;
    left: 30px;
-
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
    color: #06264F;
    font-size: 30px;
 }
 
 h2#h2txt1{
    width: 100px;
-
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
    position: absolute;
    top: 480px;
    left: 80px;
@@ -145,7 +275,10 @@ h2#h2txt1{
 
 form#form1{
    background-color: #FEF445;
-
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
    position: absolute;
    left: 35px;
    top: 550px;
@@ -157,7 +290,10 @@ form#form1{
 
 img#img1{
    width: 30px;
-   
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
    position: absolute;
    left: 20px;
    top: 10px;
@@ -167,7 +303,10 @@ h2#h2txt2{
    position: absolute;
    left: 75px;
    top: 15px;
-
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
    color: #E18211;
    font-size: 19px;
 }
@@ -177,6 +316,10 @@ img#img2{
    top: 700px;
    left: -45px;
    width: 350px;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
 }
 
 body{
@@ -185,7 +328,10 @@ body{
 
 form#form2{
    background-color: #B8CBE3;
-
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
    position: absolute;
    top: 925px;
    left: -40px;
@@ -201,7 +347,10 @@ div#div1{
    position: absolute;
    left: 225px;
    top: 10px;
-
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Fredoka", sans-serif;
    width: 110px;
    height: 30px;
    border-radius: 10px;
@@ -248,13 +397,7 @@ h2#h2txt7{
    font-size: 20px;
 }
 
-button#button1{
-   width: 545px;
 
-   position: absolute;
-   left: -450px;
-   top: -40px;
-}
 
 div#div2{
    background-color: #B8CBE3;
@@ -312,7 +455,10 @@ div#div4{
 
 h2#h2txt10{
    color: #06264F;
-
+            margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Fredoka", sans-serif;
    position: absolute;
    left: -300px;
    top: 510px;

@@ -7,83 +7,12 @@
     <link rel="icon" href="/imagens/icone.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel='stylesheet' media='screen' href='../../css/indice/objetivos.css'>
     <link rel='stylesheet' media='screen' href='../../js/indice/objetivos.js'>
     <script src="../../js/objetivos.js"></script>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-        }
+   
 
-        .container {
-            display: flex;
-            gap: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .wishlist-section {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        .item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        input[type="text"] {
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .progress-bar {
-            background-color: #eee;
-            height: 10px;
-            border-radius: 5px;
-            width: 100%;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-
-        .progress-fill {
-            background-color: #4CAF50;
-            height: 100%;
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-
-        .check-box {
-            display: flex;
-            align-items: center;
-            width: 50px;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 5px;
-        }
-
-        .completed {
-            text-decoration: line-through;
-            color: #999;
-        }
-    </style>
 </head>
 
 <body>
@@ -95,6 +24,8 @@
             <h1>Índice</h1>
         </div>
         <ul>
+            <link rel='stylesheet' media='screen' href='/css/indice/indice.css'> 
+
             <li class="item-menu">
                 <a href="perfil.html">
                     <span class="icon"> <i class="bi bi-person"></i></span>
@@ -137,17 +68,47 @@
 
     <main id="list">
         <h1 id="h1txt1">WISHLIST</h1>
-       <h2 id="h2txt5">O que eu quero</h2><h2 id="h2txt6">Quanto custa</h2><h2 id="h2txt7">Conquistei</h2>
-       <button id="button1">ADD</button>
-
-       <div id="div2">
-            <h2 id="h2txt8">Wishlist conquistadas</h2>
-            <div id="div3">
+       
+          
+        </head>
+        <body>
+            <div class="wishlist">
+                <!-- Seção para despesas mensais -->
+                <div class="section" id="monthly-expenses">
+                    <table>
+                        <thead>
+                            <tr class="lista_opcoes">
+                                <th>O que eu quero</th>
+                                <th>Quanto custa</th>
+                                <th>Conquistei</th>
+                                <th>Remover</th>
+                            </tr>
+                        </thead>
+                        <tbody id="monthly-expenses-body"></tbody>
+                    </table>
+                    <div>
+                        <button class="add-button" onclick="addFixedExpenseRow()"><i class="bi bi-plus"></i></button>
+                    </div>
+                </div>
+              
+                <script>
+                    function addFixedExpenseRow() {
+                        let tableBody = document.getElementById("monthly-expenses-body");
+                        let newRow = tableBody.insertRow();
+                        newRow.insertCell().innerHTML = '<input type="text" placeholder="">';
+                        newRow.insertCell().innerHTML = '<input type="number" placeholder="">';
+                        newRow.insertCell().innerHTML = '<input type="checkbox">';
+                        newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteFixedExpenseRow(this)"><i class="bi bi-x"></i> </button>';
+                    }
+        
+                    function deleteFixedExpenseRow(button) {
+                        let row = button.parentNode.parentNode;
+                        row.parentNode.removeChild(row);
+                    }
+                </script>
             </div>
-            <h2 id="h2txt9">Wishlist que faltão</h2>
-            <div id="div4">
-            </div>
-       </div>
+        
+     
         
         <h1 id="h1txt2">Investimento</h1>
         <h2 id="h2txt1">Meta 1</h2> 
