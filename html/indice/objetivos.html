@@ -72,6 +72,7 @@
           
         </head>
         <body>
+            
             <div class="wishlist">
                 <!-- Seção para despesas mensais -->
                 <div class="section" id="monthly-expenses">
@@ -90,26 +91,75 @@
                         <button class="add-button" onclick="addFixedExpenseRow()"><i class="bi bi-plus"></i></button>
                     </div>
                 </div>
-              
+                <div class="Contador_de_lista">
+                    <p id="conquered-count">
+                        WISHLIST CONQUISTADAS: <span class="fundo_branco" id="conquered-value">0</span>
+                    </p>
+                    <p id="remaining-count">
+                        WISHLIST QUE FALTAM: <span class="fundo_branco" id="remaining-value">0</span>
+                    </p>
+                </div>
+            
                 <script>
+                    let conqueredCount = 0;
+                    let remainingCount = 0;
+            
+                    function updateCounters() {
+                        document.getElementById("conquered-value").innerText = conqueredCount;
+                        document.getElementById("remaining-value").innerText = remainingCount;
+                    }
+            
                     function addFixedExpenseRow() {
                         let tableBody = document.getElementById("monthly-expenses-body");
                         let newRow = tableBody.insertRow();
                         newRow.insertCell().innerHTML = '<input type="text" placeholder="">';
                         newRow.insertCell().innerHTML = '<input type="number" placeholder="">';
-                        newRow.insertCell().innerHTML = '<input type="checkbox">';
-                        newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteFixedExpenseRow(this)"><i class="bi bi-x"></i> </button>';
+                        newRow.insertCell().innerHTML = '<input class="Checkbox" type="checkbox" onchange="updateConqueredCount()">';
+                        newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteFixedExpenseRow(this)"><i class="bi bi-x"></i></button>';
+                        
+                        remainingCount++;
+                        updateCounters();
                     }
-        
+            
                     function deleteFixedExpenseRow(button) {
                         let row = button.parentNode.parentNode;
+                        let checkbox = row.querySelector('.Checkbox');
+            
+                        if (checkbox.checked) {
+                            conqueredCount--;
+                        } else {
+                            remainingCount--;
+                        }
+            
                         row.parentNode.removeChild(row);
+                        updateCounters();
                     }
+            
+                    function updateConqueredCount() {
+                        let checkboxes = document.querySelectorAll('#monthly-expenses-body .Checkbox');
+                        conqueredCount = 0;
+                        remainingCount = 0;
+            
+                        checkboxes.forEach(checkbox => {
+                            if (checkbox.checked) {
+                                conqueredCount++;
+                            } else {
+                                remainingCount++;
+                            }
+                        });
+            
+                        updateCounters();
+                    }
+                    function cadastro(){
+    prompt('Adicionar nova meta');
+    prompt('Quanto você investirá nesta meta?');
+    prompt('Porque você quer investir nesta meta?');
+    alert('Esta função ainda não funciona!!');
+  }
                 </script>
             </div>
-        
-     
-        
+            
+            
         <h1 id="h1txt2">Investimento</h1>
         <h2 id="h2txt1">Meta 1</h2> 
         <h2 id="h2txt10">Progresso</h2>
@@ -157,9 +207,8 @@
             <div id="d12"></div>
         </form>
 
-        <button id="button2" type="submit" class="btn btn-primary" id="btn_cadastro" onclick="cadastro()"></button>
-        <img src="../../imagens/mais.png" alt="" id="img3">
-        
+        <button id="button2" type="submit" class="btn btn-primary" id="btn_cadastro" onclick="cadastro()"><i class="bi bi-plus"></i></button>
+      
         
 
     </main>
