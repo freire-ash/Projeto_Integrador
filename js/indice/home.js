@@ -16,7 +16,6 @@ function addFixedExpenseRow() {
     let tableBody = document.getElementById("monthly-expenses-body");
     let newRow = tableBody.insertRow();
     newRow.insertCell().innerHTML = '<input type="text" placeholder="Nome do gasto">';
-    newRow.insertCell().innerHTML = '<input type="date">';
     newRow.insertCell().innerHTML = generateCategoryDropdown();
     newRow.insertCell().innerHTML = '<input type="number" placeholder="Valor" oninput="updateCategoryExpenses()">';
     newRow.insertCell().innerHTML = '<input type="checkbox" onclick="updateCategoryExpenses(); updateBalance()">';
