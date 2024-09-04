@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Controle de Gastos</title>
 <link rel="stylesheet" href="../../css/indice/home.css">
+
+
+<style>
+
+form#entry-output{
+    background-color: #FFC436;
+    z-index: 1;
+}
+
+</style>
 </head>
 <body>
     
@@ -22,7 +32,7 @@
                 <span class="icon"> <i class="bi bi-person"></i></span>
                 <span class="txt-link">Perfil</span>
             </a></li>
-            <li class="item-menu"><a href="home.html">
+            <li class="item-menu" id="cor_button"><a href="home.html">
                 <span class="icon"><i class="bi bi-house-door"></i></span>
                 <span class="txt-link">Início</span>
             </a></li>
@@ -48,68 +58,74 @@
     <div class="home">
         <!-- Seção para o valor recebido -->
         <div class="section" id="entry-section">
-            <div class="header">ENTRADA</div>
+            <div class="header" id="div1">Saldo</div>
             <div>
                 <input type="number" id="entry-amount" placeholder="Valor">
-                <button class="add-button" onclick="addEntry()">Adicionar Entrada</button>
+                <button class="add-button" id="button1" onclick="addEntry()">Adicionar</button>
             </div>
-            <div id="entry-output">
+            <form id="entry-output">
                 <table>
                     <thead>
                         <tr>
-                            <th>Valor</th>
+                            <th id="th1">Valor</th>
                         </tr>
                     </thead>
                     <tbody id="entry-output-body"></tbody>
                 </table>
-                <div>Total de Entradas: R$ <span id="total-entry-amount">0.00</span></div>
-            </div>
+                <div id="div2">Total de Entradas: R$ <span id="total-entry-amount">0.00</span></div>
+            </form>
+                <!-- Seção para saldo disponível -->
+            <div class="balance" id="balance">Saldo Disponível: R$ 0.00</div>
         </div>
 
         <!-- Seção para despesas por categoria -->
-        <div class="section" id="category-expenses">
-            <div class="header">GASTOS POR CATEGORIA</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Categoria</th>
-                        <th>Limite de gastos</th>
-                        <th>Valor gasto</th>
-                        <th>Porcentagem</th>
-                    </tr>
-                </thead>
-                <tbody id="category-expenses-body"></tbody>
-            </table>
-            <div>
-                <button class="add-button" onclick="addCategoryRow()">Adicionar Categoria</button>
+        <div id="div7">
+            <div class="section" id="category-expenses">
+                <div class="header" id="div6">GASTOS POR CATEGORIA</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoria</th>
+                            <th id="th9">Limite</th>
+                            <th id="th10">Valor</th>
+                            <th id="th11">Porcentagem</th>
+                            <th id="th12">Remover</th>
+                        </tr>
+                    </thead>
+                    <tbody id="category-expenses-body"></tbody>
+                </table>
+               
             </div>
         </div>
-
+        <div id="div8">
+            <button class="add-button" onclick="addCategoryRow()" id="button4" ><i class="bi bi-plus-lg" id="i1"></i></button>
+        </div>
         <!-- Seção para despesas mensais -->
         <div class="section" id="monthly-expenses">
-            <div class="header">GASTOS MENSAL</div>
-            <table>
+            <div class="header" id="div5">GASTOS FIXOS DO MÊS</div>
+           <table>
                 <thead>
-                    <tr>
-                        <th>Nome do gasto</th>
-                        <th>Categoria</th>
-                        <th>Valor</th>
-                        <th>Pago</th>
-                        <th>Forma de pagamento</th>
-                        <th>Remover</th>
+                    <tr id="tabelas">
+                        <th id="th2">Nome</th>
+                        <th id="th3">Data</th>
+                        <th id="th4">Categoria</th>
+                        <th id="th5">Valor</th>
+                        <th id="th6">Pago</th>
+                        <th id="th7">Tipo</th>
+                        <th id="th8">Remover</th>
                     </tr>
                 </thead>
                 <tbody id="monthly-expenses-body"></tbody>
             </table>
             <div>
-                <button class="add-button" onclick="addFixedExpenseRow()">Adicionar Gasto Fixo</button>
+                <button class="add-button" onclick="addFixedExpenseRow()" id="button3"><i class="bi bi-plus-lg" id="i1"></i></button>
             </div>
         </div>
 
         <!-- Seção para saída de gastos -->
         <div class="section" id="expense-output">
-            <div class="header">SAÍDA</div>
-            <table>
+            <div class="header" id="div3">SAÍDA</div>
+            <table id="table1">
                 <thead>
                     <tr>
                         <th>Descrição</th>
@@ -123,18 +139,18 @@
             </div>
         </div>
 
+        <!-- Seção para saldo disponível -->
+        <div class="balance" id="div4">Saldo Disponível: R$ 0.00</div>
+
+        <!-- Seção para avisos de limite -->
+        <div id="warnings-container" class="warning"></div>
+
         <!-- Container para o gráfico de despesas -->
         <div id="chart-container">
             <canvas id="expenseChart"></canvas>
         </div>
-
-        <!-- Seção para saldo disponível -->
-        <div class="balance" id="balance">Saldo Disponível: R$ 0.00</div>
-
-        <!-- Seção para avisos de limite -->
-        <div id="warnings-container" class="warning"></div>
     </div>
-<script src="/js/indice/home.js"></script>
+<script src="../../js/indice/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    
 </body>
