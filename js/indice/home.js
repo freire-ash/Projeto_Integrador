@@ -15,12 +15,15 @@ function getRandomColor() {
 function addFixedExpenseRow() {
     let tableBody = document.getElementById("monthly-expenses-body");
     let newRow = tableBody.insertRow();
-    newRow.insertCell().innerHTML = '<input type="text" placeholder="Nome do gasto">';
+
+    newRow.insertCell().innerHTML = '<input type="text"  id="input1">';
+    newRow.insertCell().innerHTML = '<input type="date" id="input2">';
+    
     newRow.insertCell().innerHTML = generateCategoryDropdown();
-    newRow.insertCell().innerHTML = '<input type="number" placeholder="Valor" oninput="updateCategoryExpenses()">';
-    newRow.insertCell().innerHTML = '<input type="checkbox" onclick="updateCategoryExpenses(); updateBalance()">';
+    newRow.insertCell().innerHTML = '<input type="number" oninput="updateCategoryExpenses()" id="input5">';
+    newRow.insertCell().innerHTML = '<input type="checkbox" onclick="updateCategoryExpenses(); updateBalance()" id="input10">';
     newRow.insertCell().innerHTML = generatePaymentCategoryDropdown();
-    newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteFixedExpenseRow(this)">Remover</button>';
+    newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteFixedExpenseRow(this)" id="button2"><i class="bi bi-x" id="deleta"></i></button>';
 }
 
 function deleteFixedExpenseRow(button) {
@@ -33,11 +36,11 @@ function deleteFixedExpenseRow(button) {
 function addCategoryRow() {
     let tableBody = document.getElementById("category-expenses-body");
     let newRow = tableBody.insertRow();
-    newRow.insertCell().innerHTML = '<input type="text" placeholder="Categoria" oninput="updateCategoryDropdown()">';
-    newRow.insertCell().innerHTML = '<input type="text" class="currency" placeholder="Limite" onblur="formatCurrency(this); updateCategoryExpenses()">';
-    newRow.insertCell().innerHTML = '<input type="number" placeholder="Gasto" readonly>';
-    newRow.insertCell().innerHTML = '<input type="text" placeholder="Porcentagem" readonly>';
-    newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteRow(this)">Remover</button>';
+    newRow.insertCell().innerHTML = '<input type="text" oninput="updateCategoryDropdown()" id="input6">';
+    newRow.insertCell().innerHTML = '<input type="text" class="currency" onblur="formatCurrency(this); updateCategoryExpenses()" id="input7">';
+    newRow.insertCell().innerHTML = '<input type="number"  readonly id="input8">';
+    newRow.insertCell().innerHTML = '<input type="text" readonly id="input9">';
+    newRow.insertCell().innerHTML = '<button class="remove-button" onclick="deleteRow(this)" id="button5"><i class="bi bi-x" id="deleta"></button>';
     updateCategoryDropdown();
 }
 
@@ -89,7 +92,7 @@ function updateCategoryExpenses() {
             labels.push(category);
             data.push(spent);
             if (spent > limit) {
-                warnings.push(`Atenção: A categoria "${category}" ultrapassou o limite de R$ ${limit.toFixed(2)}.`);
+                warnings.push(`<h1 id="txt1">Atenção: A categoria "${category}" ultrapassou o limite de R$ ${limit.toFixed(2)}.</h1>`);
                 // Exibir alerta com `alert`
                 alert(`A categoria "${category}" ultrapassou o limite de R$ ${limit.toFixed(2)}.`);
                 // Mudar a cor da categoria para vermelho
@@ -228,10 +231,10 @@ function generateCategoryDropdown() {
     for (let i = 0; i < categoryExpensesBody.rows.length; i++) {
         let category = categoryExpensesBody.rows[i].cells[0].getElementsByTagName("input")[0].value;
         if (category) {
-            categoryOptions += `<option value="${category}">${category}</option>`;
+            categoryOptions += `<option value="${category}" id="input3">${category}</option>`;
         }
     }
-    return `<select>${categoryOptions}</select>`;
+    return `<select id="select3" >${categoryOptions}</select>`;
 }
 
 function addEntry() {
@@ -240,7 +243,7 @@ function addEntry() {
     if (amount > 0) {
         let entryOutputBody = document.getElementById("entry-output-body");
         let newRow = entryOutputBody.insertRow();
-        newRow.insertCell().innerText = `R$ ${amount.toFixed(2)}`;
+       
 
         totalEntries += amount;
         document.getElementById('total-entry-amount').innerText = totalEntries.toFixed(2);
@@ -254,9 +257,10 @@ function addEntry() {
 
 function generatePaymentCategoryDropdown() {
     return `
-        <select>
-            <option value="Débito">Débito</option>
-            <option value="Crédito">Crédito</option>
-            <option value="Outro">Outro</option>
+        <select id="select1">
+            <option value="Débito" id="option1"></option>
+            <option value="Crédito" id="option1">Crédito</option>
+            <option value="Outro" id="option1">Outro</option>
+            <option value="Débito" id="option1">Débito</option>
         </select>`;
 }
