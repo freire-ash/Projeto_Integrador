@@ -1,0 +1,15 @@
+li#li1{
+    background-color: #a6c7f1;
+
+}
+
+.cor_azul {
+    border-bottom: 91px solid #0C356A;
+    position: absolute;
+    position: fixed;
+    left: 200px;
+    width: 100%;
+    height: 13px;
+    top: 0px;
+    z-index: 1;
+ }

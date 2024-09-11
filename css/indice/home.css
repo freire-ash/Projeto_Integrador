@@ -2,6 +2,20 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
+
+.cor_azul {
+    border-bottom: 91px solid #0C356A;
+    /* Define a borda inferior */
+    position: absolute;
+    position: fixed;
+    left: 200px;
+    width: 85.2%;
+    height: 11px;
+    top: -3px;
+    z-index: 1;
+      /* Adiciona espaço acima e abaixo da linha */
+ }
+ 
 .add-button, .remove-button {
     cursor: pointer;
 }
@@ -83,7 +97,7 @@ form#entry-output{
     width: 300px;
     height: 100px;
     border-radius: 5px;
-    z-index: 1;
+    z-index: 2;
 
     position: absolute;
     left: 50px;
@@ -133,7 +147,7 @@ div#div1{
 }
 
 div#balance{
-    z-index: 1;
+    z-index: 2;
 }
 
 /* estilização da Saida */
@@ -360,7 +374,7 @@ div#div8{
     position: relative;
     left: 402px;
     top: 300px;
-    z-index: 1;
+    z-index: 2;
 }
 
 button#button4{
@@ -383,7 +397,7 @@ input#input6{
     
     position: relative;
     left: 0px;
-    z-index: 1;
+    z-index: 2;
 }
 /*Limites de gastos*/
 
@@ -398,7 +412,7 @@ input#input7{
     
     position: relative;
     left: 5px;
-    z-index: 1;
+    z-index: 2;
 }
 
 th#th9{
@@ -417,7 +431,7 @@ input#input8{
     
     position: relative;
     left: 10px;
-    z-index: 1;
+    z-index: 2;
 }
 
 th#th10{
@@ -436,7 +450,7 @@ input#input9{
     
     position: relative;
     left: 27px;
-    z-index: 1;
+    z-index: 2;
 }
 
 th#th11{
@@ -458,7 +472,7 @@ button#button5{
     border-width: 1px; 
     border: none;
     font-family: "Fredoka", sans-serif;
-    z-index: 1;
+    z-index: 2;
     
     position: relative;
     left: 26px;
