@@ -6,14 +6,74 @@
     <link rel="icon" href="/imagens/icone.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
-    <title>Calendario</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../css/indice/anual.css'>
+
+    <title>Visão anual</title>
+
+    <style>
+      
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+      
+      .container {
+        width: 100%;
+        margin: 12 auto;
+        text-align: center;
+      }
+      
+      h1 {
+        color: #2980b9;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      
+      h2 {
+        color: #2980b9;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      
+      th, td {
+        padding: 8px;
+        text-align: left;
+      }
+      
+      th {
+        background-color: #f0f0f0;
+      
+      }
+      td {
+          color: #2980b9;
+      }
+      .table-header {
+        width: 100px;
+        text-align: center;
+      }
+      
+      .table-cell {
+        width: 80px;
+      }
+      
+      input[type="text"] {
+        border: none;
+        padding: 8px;
+        width: 100%;
+      }
+      </style>
 </head>
 <body>
-    <nav class="menu-lateral">
+  <nav class="menu-lateral">
         <link rel='stylesheet' media='screen' href='../../css/indice/indicel.css'> 
         <div class="btn-expandir">
-            <h1>Índice</h1>
+            <h1 class="h3">Índice</h1>
          </div>
          <div class="cor_azul">
         </div>
@@ -39,7 +99,7 @@
             <span class="txt-link">Objetivos</span>
         </a>
         </li>
-        <li class="item-menu"><a href="anual.html">
+        <li class="item-menu" id="objselect"><a href="anual.html">
             <span class="icon"><i class="bi bi-calendar-check"></i></span>
             <span class="txt-link">Visão Anual</span>
         </a>
@@ -50,72 +110,13 @@
         </a>
         </li>
     </nav>
-    <h1>Visão Anual</h1>
-    <!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  font-family: Arial, sans-serif;
-}
+    
 
-.container {
-  width: 100%;
-  margin: 12 auto;
-  text-align: center;
-}
 
-h1 {
-  color: #2980b9;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #2980b9;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f0f0f0;
-
-}
-td {
-    color: #2980b9;
-}
-.table-header {
-  width: 100px;
-  text-align: center;
-}
-
-.table-cell {
-  width: 80px;
-}
-
-input[type="text"] {
-  border: none;
-  padding: 8px;
-  width: 100%;
-}
-</style>
-</head>
-<body>
-<div class="container">
-  <h1>Comparativo anual</h1>
-  <h2>MESES</h2>
-  <table>
+  <div class="container">
+    <h1>Comparativo anual</h1>
+    <h2>MESES</h2>
+    <table>
     <thead>
       <tr>
         <th class="table-header"></th>
@@ -181,8 +182,8 @@ input[type="text"] {
       </tr>
     </tbody>
   </table>
-</div>
-</body>
-</html>
+  </div>
+  </body>
+  
 </body>
 </html>
