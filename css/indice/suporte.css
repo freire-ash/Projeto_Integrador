@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ 
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-style: normal;
+}
+ 
+.cor_azul {
+   border-bottom: 91px solid #0C356A;
+   position: absolute;
+   position: fixed;
+   left: 200px;
+   width: 100%;
+   height: 13px;
+   top: 0px;
+   z-index: 1;
+}
+     
+ 
+   nav.menu-lateral {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+    position: fixed;
+    width: 250px; /* Aumenta a largura da barra lateral */
+    height: 100%;
+    background: linear-gradient(#06264F 15.2%, #E6E6E6 10%);
+    padding: 31px 0 50px 1%;
+    font-weight: 600;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+ 
+   .btn-expandir{
+      display: flex;
+      width: 50px;
+      margin-top: 12px;
+      padding-left: 26px;
+      color: #ffffff;
+      position: fixed;
+      font-size: 20;
+      font-weight: 150;
+      margin-left: 30px;
+   }
+   ul {
+      margin-top: 105px;
+   
+   }
+ 
+   .btn-expandir > i {
+      color: rgb(255, 255, 255);
+      font-size: 30px;
+      cursor: pointer;
+   }
+   ul{
+      height: 100%;
+      list-style-type: none;
+ 
+   }
+   ul li.item-menu{
+      transition:  .1s;
+   }
+   ul li.item-menu :hover{
+   background-color: #D6D9F2;
+ 
+   }
+   ul li.item-menu a {
+      color: #0C356A;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 10px 4%;
+      display: flex;
+      margin-bottom: 20px;
+      line-height: 40px;
+     
+   }
+   ul li.item-menu a .txt-link {
+      margin-left: 10px;
+      font-size: px;
+   }
+   ul li.item-menu a .icon{
+      font-size: 30px;
+      position: relative;
+ 
+   }
+ 
+ 
+div{
+            
+    position: absolute;
+    top: 52%;
+    left: 645px;
+    font-family : "Fredoka", sans-serif;
+    font-size: 32px;
+    color: #0c356a;
+ }
+
+nav{
+    position: absolute;
+    top: 20%;
+    left: 645px ;
+}
+
+input{
+    position: absolute;
+    top: 70%;
+    left: 676px;
+   
+}
+button{
+    position: absolute;
+    top: 80%;
+    left: 660px;
+    background-color: #ffd23f;
+     border-radius: 15px;
+     border-color: #ffd23f;
+    font-size: 40px;
+    font-family : "Fredoka", sans-serif;
+     color: #ffffff;
+     width: 200px;
+     border: none;
+}

@@ -12,18 +12,7 @@
       font-style: normal;
  
   }
-  .cor_azul {
-   border-bottom: 91px solid #0C356A;
-   /* Define a borda inferior */
-   position: absolute;
-   position: fixed;
-   left: 200px;
-   width: 85.2%;
-   height: 11px;
-   top: -3px;
-   z-index: 9999;
-     /* Adiciona espaço acima e abaixo da linha */
-}
+ 
  
    nav.menu-lateral{
             margin: 0;
@@ -38,7 +27,8 @@
       padding: 31px 0 50px 1%;
       font-weight: 600; 
       top: 0;
-      left: 0;   
+      left: 0;
+      z-index: 1;   
    }
 
    .btn-expandir{

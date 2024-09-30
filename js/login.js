@@ -98,3 +98,7 @@ function senhaValida(senha) {
 
     return true;
 }
+
+function final(){
+    alert('Login realizado com sucesso!')
+}

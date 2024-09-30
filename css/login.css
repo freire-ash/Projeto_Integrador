@@ -222,88 +222,19 @@
 
         /* Add this to the end of the login.css file */
 @media only screen and (max-width: 768px) {
-    .imagem-container {
-           display: none;
-       }
-    .forms-section {
-           padding: 20px;
-       }
-    .forms {
-           flex-direction: row;
-           flex-wrap: wrap;
-           justify-content: center;
-       }
-    .form-wrapper {
-           width: 45%;
-           margin: 10px;
-       }
-    .form {
-           width: 100%;
-       }
-    .input-block {
-           width: 100%;
-       }
-    .btn-login,.btn-signup {
-           width: 100%;
-           font-size: 14px;
-           padding: 10px;
-       }
-      input[type="text"], input[type="email"], input[type="password"] {
-           font-size: 14px;
-           padding: 10px;
-       }
-      label {
-           font-size: 14px;
-       }
-   }
-   @media only screen and (max-width: 768px) {
-    img{
-        display: none;
-    }
-    .forms-section {
-        padding: 20px;
-        position: static;
-    }
+  /* Estilo básico para garantir a responsividade */
 
-    .forms {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        margin-right: 0;
-    }
+  body{
+    width: 20%;
+    height: 20%;
+    position: left;
+  }
+   
 
-    .form-wrapper {
-        width: 35%;
-        margin: 10px;
-    }
+  .imagem-container {
+  display: none;
 
-    .form {
-        width: 60%;
-        margin-top: 4px;
-        padding: 20px 15px;
-    }
-
-    .input-block {
-        width: 60%;
-        margin-bottom: 10px;
-    }
-
-    .btn-login,
-    .btn-signup {
-        width: 60%;
-        border-radius: 2px;
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-        font-size: 14px;
-        padding: 4px;
-    }
-
-    label {
-        font-size: 14px;
-    }
-}
+  }
+  
+ 
+  }

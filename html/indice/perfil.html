@@ -8,19 +8,96 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Controle de Gastos</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
+        li#select{
+            background-color: #a6c7f1;
+        }
+ 
+        .cor_azul {
+    border-bottom: 91px solid #0C356A;
+    /* Define a borda inferior */
+    position: absolute;
+    position: fixed;
+    left: 200px;
+    width: 1500px;
+    height: 11px;
+    top: 0px;
+    z-index: 1;
+      /* Adiciona espaço acima e abaixo da linha */
+ }
+ form {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+   font-family: "Fredoka", sans-serif;
+   color: #0c356a;
+   font-size: 45px;
+}
+i#perfil {
+    position: absolute;
+    top: -205%;
+   font-size: 210px;
+}
+h3{
+    position: absolute;
+    top: 68%;
+    left: 48%;
+    font-family: "Fredoka", sans-serif;
+    color: #0c356a;
+}
+.gmail{
+    position: absolute;
+    top: 78%;
+    left: 38%;
+    font-family: "Fredoka", sans-serif;
+    color: #0c356a;
+}
+ 
+.idade{
+    position: absolute;
+    top: 84%;
+    left: 38%;
+    font-family: "Fredoka", sans-serif;
+    color: #0c356a;
+}
+.documento{
+    position: absolute;
+    top: 90%;
+    left: 38%;
+    font-family: "Fredoka", sans-serif;
+    color: #0c356a;
+}
+button{
+    position: absolute;
+    top: 110%;
+    left: 52%;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #a6c7f1;
+    border: none;
+    border-radius: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: #fff;
+    font-size: 20px;
+   
+}
+ 
+ 
     </style>
 </head>
+ 
 <body>
-    
+   
     <nav class="menu-lateral">
-        <link rel='stylesheet' media='screen' href='../../css/indice/indice.css'> 
+        <link rel='stylesheet' media='screen' href='../../css/indice/indice.css'>
         <div class="btn-expandir">
             <h1>Índice</h1>
         </div>
         <div class="cor_azul"></div>
         <ul>
-            <li class="item-menu"><a href="perfil.html">
+            <li class="item-menu" id="select"><a href="perfil.html">
                 <span class="icon"> <i class="bi bi-person"></i></span>
                 <span class="txt-link">Perfil</span>
             </a></li>
@@ -46,5 +123,18 @@
             </a></li>
         </ul>
     </nav>
+   <form> <h1 >Perfil</h1>
+ 
+   <i class="bi bi-person-circle" id="perfil"></i>
+</form>
+ 
+<h3>por aqui des de ** de ****</h3>
+<h2 class="gmail">Gmail:
+</h2>
+<h2 class="idade">idade:</h2>
+<h2 class="documento">documento:</h2>
+<a href="../login1.html"><button>sair</button>
 
+</body>
+ 
 </html>

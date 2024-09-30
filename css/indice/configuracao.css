@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+li#li1{
+    background-color: #a6c7f1;
+
+}
+
+.cor_azul {
+    border-bottom: 91px solid #0C356A;
+    position: absolute;
+    position: fixed;
+    left: 200px;
+    width: 100%;
+    height: 13px;
+    top: 0px;
+    z-index: 1;
+}
+
+/*botão de meta*/
+button#button1{
+    border: none;
+    background-color: #FFFFFF;
+
+    position: absolute;
+    left: 300px;
+    top: 150px;
+}
+
+i#i1{
+    font-size: 50px;
+    color: #0C356A;
+}
+
+h2#h2txt1{
+    font-family: "Open Sans", sans-serif;
+}
+
+/*botão do Orçamento*/
+button#button2{
+    border: none;
+    background-color: #FFFFFF;
+    
+    position: absolute;
+    left: 500px;
+    top: 150px;
+}
+
+i#i2{
+    font-size: 50px;
+    color: #0C356A;
+}
+
+h2#h2txt2{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+
+    position: absolute;
+    left: 465px;
+    top: 210px;
+}
+
+/*botão de transação*/
+
+button#button3{
+    border: none;
+    background-color: #FFFFFF;
+    
+    position: absolute;
+    left: 700px;
+    top: 150px;
+}
+
+h2#h2txt3{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+
+    position: absolute;
+    left: 670px;
+    top: 210px;
+}
+/*Notificação*/
+button#button4{
+    border: none;
+    background-color: #FFFFFF;
+    
+    position: absolute;
+    left: 900px;
+    top: 150px;
+}
+
+h2#h2txt4{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+
+    position: absolute;
+    left: 865px;
+    top: 210px;
+}
+/*suporte*/
+button#button5{
+    border: none;
+    background-color: #FFFFFF;
+    
+    position: absolute;
+    left: 1100px;
+    top: 150px;
+}
+
+h2#h2txt5{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+
+    position: absolute;
+    left: 1085px;
+    top: 210px;
+}
+/*Preferencias*/
+button#button6{
+    border: none;
+    background-color: #FFFFFF;
+    
+    position: absolute;
+    left: 500px;
+    top: 300px;
+}
+
+h2#h2txt6{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+
+    position: absolute;
+    left: 465px;
+    top: 360px;
+}
+/*segurança*/
+button#button7{
+    border: none;
+    background-color: #FFFFFF;
+    
+    position: absolute;
+    left: 900px;
+    top: 300px;
+}
+
+h2#h2txt7{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+
+    position: absolute;
+    left: 875px;
+    top: 360px;
+}
